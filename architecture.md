@@ -91,6 +91,24 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
   - Navigation wird zu Hamburger-Menü
   - Grid/Spalten werden gestapelt
 
+## Zugangsschutz (einfach, clientseitig)
+- Für Netlify Free ist ein einfacher Passwort-Schutz direkt im Frontend umgesetzt.
+- Neue Dateien:
+  - `access/login.html` — Login-Seite mit Passwortprüfung
+  - `access/access-guard.js` — Guard-Script für Redirect bei fehlender Session
+- Geschützte Seiten:
+  - `index.html`
+  - `impressum.html`
+  - alle `articles/*.html`
+- Mechanik:
+  - Bei korrektem Passwort setzt die Login-Seite `sessionStorage["site_access_granted"] = "1"`.
+  - Ohne dieses Flag leitet `access/access-guard.js` auf `/access/login.html?next=...` um.
+  - Nach erfolgreichem Login erfolgt Redirect auf den ursprünglich angeforderten Pfad (`next`) oder auf `/index.html`.
+- Passwort ändern:
+  - In `access/login.html` die Konstante `ACCESS_PASSWORD` anpassen.
+- Hinweis:
+  - Dies ist bewusst ein einfacher Schutz zur Zugriffsbeschränkung, aber kein vollständiger Perimeter-Schutz wie Cloudflare Access oder Netlify Password Protection (Paid).
+
 ## Wartung
 - Navbar-Änderung global auf Artikel anwenden: `bash update-nav.sh`
 - Bei Content-Updates auf korrekte Titelzuordnung + passendes Bild in `images/article_images/` achten.
