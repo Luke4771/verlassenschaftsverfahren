@@ -484,6 +484,10 @@ ul {
         font-size: 1.8rem;
     }
 
+    .article {
+        padding: 40px 16px;
+    }
+
     .article-content h1 {
         font-size: 1.7rem;
     }
