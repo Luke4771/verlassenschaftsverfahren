@@ -15,6 +15,7 @@ Statische Landing Page für eine Informationsseite über österreichisches Erbre
 ├── layout reference/           — Design-Referenzbilder (nicht Teil der Website)
 ├── about.md                    — Projektbeschreibung
 ├── design.md                   — Farb-Definitionen
+├── update-nav.sh               — Script: aktualisiert die Navbar in allen Artikel-Seiten
 ├── architecture.md             — Diese Datei
 └── CLAUDE.md                   — Anweisungen für Claude
 ```
@@ -23,7 +24,7 @@ Statische Landing Page für eine Informationsseite über österreichisches Erbre
 1. **Top-Bar** (`.top-bar`) — Blaue Leiste mit Kontaktdaten
 2. **Navbar** (`.navbar`) — Logo links, 3 Menüpunkte zentriert (Anker-Links)
 3. **Hero** (`.hero`) — Titel, Divider, Tagline + Platzhalter rechts
-4. **Wichtige Themen** (`.themen`) — 4 Boxen im 2x2-Grid mit Kategorie-Überschriften und Artikel-Links
+4. **Themenübersicht** (`.themen`) — 4 Boxen im 2x2-Grid mit Kategorie-Überschriften und Artikel-Links
 5. **Kontakt** (`.kontakt`) — Google Maps links, Kontaktinfo + Formular rechts
 6. **Footer** (`.footer`) — Impressum, Datenschutz, Copyright
 
@@ -32,6 +33,7 @@ Statische Landing Page für eine Informationsseite über österreichisches Erbre
 - Verwenden dieselbe `styles.css` (relativer Pfad: `../styles.css`)
 - Haben dieselbe Navbar und Footer wie die Landing Page
 - Enthalten einen Zurück-Link zur Landing Page
+- **Navbar-Änderungen** müssen auch in allen Artikel-Seiten übernommen werden → dafür `update-nav.sh` anpassen und ausführen (`bash update-nav.sh`)
 
 ## Farben
 | Verwendung | Farbe |
