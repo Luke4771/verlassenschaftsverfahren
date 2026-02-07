@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum – Verlassenschaftsverfahren.at</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Obere Kontaktleiste -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <span>RA Dr. Martin Cvikl</span>
+            <span class="separator">|</span>
+            <span>&#9742; +43 (0) 1 290 83 53</span>
+            <span class="separator">|</span>
+            <span>&#9993; office@cvikl.law</span>
+            <span class="separator">|</span>
+            <span>Getreidemarkt 1, 1060 Wien</span>
+        </div>
+    </div>
+
+    <!-- Navigationsleiste -->
+    <nav class="navbar">
+        <a href="index.html#home" class="nav-logo">
+            <img src="images/logo.png" alt="MC Logo">
+        </a>
+        <button class="nav-toggle" aria-label="Menü öffnen">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu">
+            <li><a href="index.html#home">HOME</a></li>
+            <li><a href="index.html#wichtige-themen">Wichtige Themen</a></li>
+            <li><a href="index.html#kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.nav-menu').classList.toggle('open');
+        });
+        document.querySelectorAll('.nav-menu a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                document.querySelector('.nav-toggle').classList.remove('active');
+                document.querySelector('.nav-menu').classList.remove('open');
+            });
+        });
+    </script>
+
+    <!-- Impressum Inhalt -->
+    <main class="article">
+        <div class="article-content">
+            <h1>Impressum</h1>
+
+            <h2>Informationspflichten gemäß § 5 ECG und Offenlegung gemäß § 25 MedienG:</h2>
+            <p>
+                Dr. Martin Cvikl<br>
+                Rechtsanwalt<br>
+                Getreidemarkt 1 (4. Stock)<br>
+                1060 Wien
+            </p>
+            <p>ADVM-Code: R136277</p>
+            <p>
+                Telefon: +43 (0) 1 290 83 53<br>
+                E-Mail: office@cvikl.law<br>
+                Website: <a href="https://www.cvikl.law" style="color: #5A84D8;">https://www.cvikl.law</a>
+            </p>
+            <p>Dr. Martin Cvikl ist Mitglied der Rechtsanwaltskammer Wien. Zuständige Aufsichtsbehörde ist der Ausschuss der Rechtsanwaltskammer Wien, Rotenturmstraße 13, 1010 Wien. Die Berufsausübung unterliegt den Regeln der Österreichischen Rechtsanwaltsordnung (RAO). Die RAO und die für die Berufsausübung geltenden Richtlinien können unter <a href="https://www.oerak.at" style="color: #5A84D8;">www.oerak.at</a> eingesehen werden.</p>
+            <p>Unternehmensgegenstand ist die Ausübung der Rechtsanwaltschaft im Sinne der RAO.</p>
+            <p>Diese Website dient der Präsentation der Dienstleistungen der Kanzlei und richtet sich an Klienten sowie an sonstige interessierte Personen.</p>
+
+            <h2>Datenschutz</h2>
+            <p>Siehe die Datenschutzerklärung.</p>
+
+            <h2>Urheberrecht</h2>
+            <p>Die Texte und Bilder der Webseite sind urheberrechtlich geschützt. Eine Verwertung, Verbreitung, Speicherung, Vervielfältigung, Veränderung oder Zugänglichmachung gegenüber Dritten ist nicht gestattet.</p>
+
+            <h2>Haftungsausschluss</h2>
+            <p>Für die Inhalte externer Links wird keine Haftung übernommen. Zudem besteht keinerlei Haftung für die Vollständigkeit, Richtigkeit oder Aktualität der Webseiteninhalte von www.cvikl.law. Für sämtliche Rechtsstreitigkeiten im Zusammenhang mit dem Webseiteninhalt und/oder dem Haftungsausschluss sind ausschließlich die für den 1. Bezirk (Wien Innere Stadt) sachlich zuständigen Gerichte zur Entscheidung berufen. Es gilt österreichisches Recht unter Ausschluss von Verweisungsnormen des IPR und des UN-Kaufrechts.</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="impressum.html">Impressum</a>
+            <a href="#">Datenschutz</a>
+        </div>
+        <p>&copy; Dr. Martin Cvikl 2025</p>
+    </footer>
+
+</body>
+</html>

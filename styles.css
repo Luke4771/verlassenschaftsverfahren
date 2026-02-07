@@ -1,0 +1,518 @@
+/* === Reset & Grundlagen === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* === Obere Kontaktleiste === */
+.top-bar {
+    background-color: #5A84D8;
+    color: #fff;
+    padding: 8px 0;
+    font-size: 0.85rem;
+}
+
+.top-bar-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.top-bar .separator {
+    opacity: 0.7;
+}
+
+/* === Navigationsleiste === */
+.navbar {
+    background-color: #36373b;
+    display: flex;
+    align-items: center;
+    padding: 12px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo img {
+    height: 72px;
+    width: auto;
+    margin: -10px 0;
+    display: block;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-menu a {
+    color: #fff;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    transition: opacity 0.2s;
+}
+
+.nav-menu a:hover {
+    opacity: 0.7;
+}
+
+/* === Hamburger Menu === */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: auto;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.nav-toggle.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* === Hero Section === */
+.hero {
+    background: #f0f0f0;
+    padding: 50px 40px;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    background:
+        radial-gradient(circle at 75% 30%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+        linear-gradient(135deg, #2a2b2f 0%, #36373b 40%, #2e3348 100%);
+    border-radius: 0;
+    padding: 80px 60px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    position: relative;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    color: #fff;
+    font-size: 2.6rem;
+    font-weight: 300;
+    line-height: 1.3;
+    margin-bottom: 28px;
+    letter-spacing: -0.3px;
+}
+
+.hero-divider {
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, #5A84D8, #7ba3f0);
+    margin-bottom: 28px;
+    border-radius: 2px;
+    box-shadow: 0 0 12px rgba(90, 132, 216, 0.4);
+}
+
+.hero-tagline {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 1.15rem;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+}
+
+.hero-image {
+    flex: 0 0 440px;
+    align-self: stretch;
+    margin: 0 0 -140px 0;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35), 0 0 30px rgba(90, 132, 216, 0.1);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* === Wichtige Themen Section === */
+.themen {
+    background-color: #f0f0f0;
+    padding: 80px 40px;
+}
+
+.themen h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.themen h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: #5A84D8;
+    margin: 15px auto 50px;
+}
+
+.themen-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.themen-box {
+    background-color: #5A84D8;
+    padding: 35px 30px;
+    border-radius: 0;
+    min-height: 280px;
+}
+
+.themen-box h3 {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.themen-box ul {
+    margin-top: 10px;
+}
+
+.themen-box ul li {
+    margin-bottom: 8px;
+    padding-left: 12px;
+    position: relative;
+}
+
+.themen-box ul li::before {
+    content: "›";
+    position: absolute;
+    left: 0;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.themen-box ul li a {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.themen-box ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* === Kontakt Section === */
+.kontakt {
+    padding: 0;
+}
+
+.kontakt-content {
+    display: flex;
+    min-height: 500px;
+}
+
+.kontakt-map {
+    flex: 1;
+}
+
+.kontakt-map iframe {
+    display: block;
+}
+
+.kontakt-info {
+    flex: 1;
+    padding: 50px 40px;
+}
+
+.kontakt-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.kontakt-info p {
+    margin-bottom: 15px;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* === Kontaktformular === */
+.kontakt-form {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.kontakt-form label {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 4px;
+}
+
+.kontakt-form input,
+.kontakt-form textarea {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    margin-bottom: 15px;
+}
+
+.kontakt-form input:focus,
+.kontakt-form textarea:focus {
+    outline: none;
+    border-color: #5A84D8;
+}
+
+.kontakt-form button {
+    background-color: #5A84D8;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    align-self: flex-end;
+    transition: background-color 0.2s;
+}
+
+.kontakt-form button:hover {
+    background-color: #4a72c4;
+}
+
+/* === Footer === */
+.footer {
+    background-color: #36373b;
+    color: #aaa;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.footer-links {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.footer-links a {
+    color: #ccc;
+    font-size: 0.95rem;
+    transition: opacity 0.2s;
+}
+
+.footer-links a:hover {
+    opacity: 0.7;
+}
+
+.footer p {
+    font-size: 0.85rem;
+}
+
+/* === Artikel-Seite === */
+.article {
+    min-height: calc(100vh - 300px);
+    padding: 60px 40px;
+    background-color: #fff;
+}
+
+.article-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.article-back {
+    display: inline-block;
+    color: #5A84D8;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+}
+
+.article-back:hover {
+    text-decoration: underline;
+}
+
+.article-content h1 {
+    font-size: 2rem;
+    color: #333;
+    font-weight: 700;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #5A84D8;
+    margin-bottom: 30px;
+}
+
+.article-content h2 {
+    font-size: 1.4rem;
+    color: #333;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.article-content p {
+    margin-bottom: 18px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.article-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px 0;
+}
+
+.article-placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+    .top-bar-content {
+        font-size: 0.75rem;
+        gap: 5px;
+    }
+
+    .navbar {
+        padding: 12px 20px;
+        flex-wrap: wrap;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        padding-top: 15px;
+        position: static;
+        transform: none;
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+
+    .nav-menu li {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 12px 0;
+        font-size: 0.95rem;
+    }
+
+    .hero {
+        padding: 30px 16px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 30px;
+        border-radius: 0;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-divider {
+        margin: 20px auto;
+    }
+
+    .hero-image {
+        flex: none;
+        width: 100%;
+        height: 220px;
+        align-self: auto;
+        margin: 0;
+    }
+
+    .themen {
+        padding: 50px 20px;
+    }
+
+    .themen-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .kontakt-content {
+        flex-direction: column;
+    }
+
+    .kontakt-map {
+        min-height: 300px;
+    }
+
+    .kontakt-info {
+        padding: 30px 20px;
+    }
+}

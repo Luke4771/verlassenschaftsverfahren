@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wann wird ein Verlassenschaftskurator bestellt? – Verlassenschaftsverfahren.at</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+    <!-- Obere Kontaktleiste -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <span>RA Dr. Martin Cvikl</span>
+            <span class="separator">|</span>
+            <span>&#9742; +43 (0) 1 290 83 53</span>
+            <span class="separator">|</span>
+            <span>&#9993; office@cvikl.law</span>
+            <span class="separator">|</span>
+            <span>Getreidemarkt 1, 1060 Wien</span>
+        </div>
+    </div>
+
+    <!-- Navigationsleiste -->
+    <nav class="navbar">
+        <a href="../index.html#home" class="nav-logo">
+            <img src="../images/logo.png" alt="MC Logo">
+        </a>
+        <button class="nav-toggle" aria-label="Menü öffnen">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu">
+            <li><a href="../index.html#home">HOME</a></li>
+            <li><a href="../index.html#wichtige-themen">Wichtige Themen</a></li>
+            <li><a href="../index.html#kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.nav-menu').classList.toggle('open');
+        });
+        document.querySelectorAll('.nav-menu a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                document.querySelector('.nav-toggle').classList.remove('active');
+                document.querySelector('.nav-menu').classList.remove('open');
+            });
+        });
+    </script>
+
+    <!-- Artikel-Inhalt -->
+    <main class="article">
+        <div class="article-content">
+            <a href="../index.html#wichtige-themen" class="article-back">&larr; Zurück zu Wichtige Themen</a>
+            <h1>Wann wird ein Verlassenschaftskurator bestellt?</h1>
+            <p class="article-placeholder">Artikelinhalt folgt.</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="../impressum.html">Impressum</a>
+            <a href="#">Datenschutz</a>
+        </div>
+        <p>&copy; Dr. Martin Cvikl 2025</p>
+    </footer>
+
+</body>
+</html>

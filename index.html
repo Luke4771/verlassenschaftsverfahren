@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verlassenschaftsverfahren.at – Ihr Themenportal zu Fragen rund ums Erben und Vererben</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Obere Kontaktleiste -->
+    <div class="top-bar" id="home">
+        <div class="top-bar-content">
+            <span>RA Dr. Martin Cvikl</span>
+            <span class="separator">|</span>
+            <span>&#9742; +43 (0) 1 290 83 53</span>
+            <span class="separator">|</span>
+            <span>&#9993; office@cvikl.law</span>
+            <span class="separator">|</span>
+            <span>Getreidemarkt 1, 1060 Wien</span>
+        </div>
+    </div>
+
+    <!-- Navigationsleiste -->
+    <nav class="navbar">
+        <a href="#home" class="nav-logo">
+            <img src="images/logo.png" alt="MC Logo">
+        </a>
+        <button class="nav-toggle" aria-label="Menü öffnen">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#wichtige-themen">Wichtige Themen</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.nav-menu').classList.toggle('open');
+        });
+        document.querySelectorAll('.nav-menu a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                document.querySelector('.nav-toggle').classList.remove('active');
+                document.querySelector('.nav-menu').classList.remove('open');
+            });
+        });
+    </script>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Herzlich willkommen auf verlassenschaftsverfahren.at</h1>
+                <div class="hero-divider"></div>
+                <p class="hero-tagline">Ihr Themenportal zu Fragen rund ums Erben und Vererben</p>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero.jpg" alt="Dokument wird unterschrieben">
+            </div>
+        </div>
+    </section>
+
+    <!-- Wichtige Themen Section -->
+    <section class="themen" id="wichtige-themen">
+        <h2>Wichtige Themen</h2>
+        <div class="themen-grid">
+            <div class="themen-box">
+                <h3>Allgemeines Erb- und Pflichtteilsrecht</h3>
+                <ul>
+                    <li><a href="articles/gesetzliche-erbfolge.html">Überblick zur gesetzlichen Erbfolge</a></li>
+                    <li><a href="articles/pflichtteilsrecht.html">Überblick über das Pflichtteilsrecht</a></li>
+                    <li><a href="articles/halbierung-pflichtteil.html">Wann ist eine Halbierung des Pflichtteils zulässig?</a></li>
+                    <li><a href="articles/sicherstellung-pflichtteilsansprueche.html">Die Sicherstellung von Pflichtteilsansprüchen</a></li>
+                    <li><a href="articles/erbunwuerdigkeit-enterbung.html">Erbunwürdigkeit und Enterbung</a></li>
+                    <li><a href="articles/vorausvermaechtnis.html">Das gesetzliche Vorausvermächtnis von Ehegatten und Lebensgefährten</a></li>
+                    <li><a href="articles/abgeltung-pflegeleistungen.html">Die finanzielle Abgeltung von Pflegeleistungen</a></li>
+                    <li><a href="articles/ungueltigkeit-letztwillige-verfuegungen.html">Die Ungültigkeit von letztwilligen Verfügungen</a></li>
+                    <li><a href="articles/erbverzicht-pflichtteilsverzicht.html">Erbverzicht und Pflichtteilsverzicht</a></li>
+                </ul>
+            </div>
+            <div class="themen-box">
+                <h3>Verlassenschaftsverfahren</h3>
+                <ul>
+                    <li><a href="articles/ablauf-verlassenschaftsverfahren.html">Der Ablauf eines Verlassenschaftsverfahrens</a></li>
+                    <li><a href="articles/erbschaft-annehmen-ausschlagen.html">Erbschaft annehmen oder ausschlagen?</a></li>
+                    <li><a href="articles/kontenoeffnung.html">Die Kontenöffnung im Verlassenschaftsverfahren</a></li>
+                    <li><a href="articles/erbteilung-miterben.html">Was ist bei der Erbteilung unter mehreren Miterben zu beachten?</a></li>
+                    <li><a href="articles/kosten-steuern.html">Kosten und Steuern im Verlassenschaftsverfahren</a></li>
+                    <li><a href="articles/verlassenschaftsgerichtliche-genehmigung.html">Wann ist eine verlassenschaftsgerichtliche Genehmigung notwendig?</a></li>
+                    <li><a href="articles/verlassenschaftskurator.html">Wann wird ein Verlassenschaftskurator bestellt?</a></li>
+                    <li><a href="articles/vermoegen-ausland.html">Was ist bei Vermögen des Erblassers im Ausland zu beachten?</a></li>
+                </ul>
+            </div>
+            <div class="themen-box">
+                <h3>Erbrecht und Immobilienrecht</h3>
+                <ul>
+                    <li><a href="articles/eigentumswohnung.html">Was passiert mit der Eigentumswohnung im Verlassenschaftsverfahren?</a></li>
+                    <li><a href="articles/bewertung-liegenschaften.html">Wie werden Liegenschaften im Verlassenschaftsverfahren bewertet?</a></li>
+                    <li><a href="articles/schenkungsanrechnung.html">Die Bewertung von (Liegenschaft-)Schenkungen im Rahmen der Schenkungsanrechnung</a></li>
+                </ul>
+            </div>
+            <div class="themen-box">
+                <h3>Erbrecht und Unternehmensrecht</h3>
+                <ul>
+                    <li><a href="articles/einzelunternehmen.html">Das Einzelunternehmen des Erblassers in der Verlassenschaft</a></li>
+                    <li><a href="articles/og-kg-anteile.html">Das Schicksal von OG- und KG-Anteilen in der Verlassenschaft</a></li>
+                    <li><a href="articles/gmbh-anteil.html">Der GmbH-Anteil in der Verlassenschaft</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt Section -->
+    <section class="kontakt" id="kontakt">
+        <div class="kontakt-content">
+            <div class="kontakt-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2659.4!2d16.3598!3d48.2005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d07984e01f9e1%3A0x2a0e5b2c1e5b3d0a!2sGetreidemarkt%201%2C%201060%20Wien!5e0!3m2!1sde!2sat!4v1700000000000"
+                    width="100%"
+                    height="100%"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <div class="kontakt-info">
+                <h2>Kontakt</h2>
+                <p>RA Dr. Martin Cvikl<br>Getreidemarkt 1<br>1060 Wien</p>
+                <p>Tel: &nbsp; +43 (0) 1 290 83 53<br>Mail: &nbsp;office@cvikl.law</p>
+                <form class="kontakt-form" onsubmit="return false;">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="nachricht">Nachricht *</label>
+                    <textarea id="nachricht" name="nachricht" rows="4" required></textarea>
+                    <button type="submit">Senden</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="impressum.html">Impressum</a>
+            <a href="#">Datenschutz</a>
+        </div>
+        <p>&copy; Dr. Martin Cvikl 2025</p>
+    </footer>
+
+</body>
+</html>
