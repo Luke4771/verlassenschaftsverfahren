@@ -38,6 +38,35 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
 - Inhaltscontainer: `<main class="article"><div class="article-content">...`
 - Inhaltsblöcke: primär `<h1>`, `<h2>`, `<p>`, `<img class="article-image">`
 - Zurück-Link am Beginn (`.article-back`)
+- CTA-Card am Ende jedes Artikels (vor `</div>` von `.article-content`)
+
+## CTA-Komponente auf Artikelseiten
+- Komponente: `<section class="article-cta">`
+- Platzierung: auf allen `articles/*.html` direkt unter dem Artikelinhalt
+- Portraitbild: `../images/martin.webp`
+- Kontaktdaten in der Karte:
+  - `RA Dr. Martin Cvikl`
+  - `office@cvikl.law`
+  - `+43 (0) 1 290 83 53`
+  - `Getreidemarkt 1, 1060 Wien`
+- Verwendete CSS-Klassen:
+  - `.article-cta`
+  - `.article-cta-content`
+  - `.article-cta-main`
+  - `.article-cta-title`
+  - `.article-cta-title-intro`
+  - `.article-cta-title-topic`
+  - `.article-cta-text`
+  - `.article-cta-person`
+  - `.article-cta-contact`
+  - `.article-cta-actions`
+  - `.article-cta-image`
+- Linkziele der CTA-Buttons:
+  - Primärbutton: `../index.html#kontakt`
+  - Sekundärbutton: `tel:+4312908353`
+- Responsives Verhalten:
+  - Desktop: Text links, Portrait rechts
+  - Mobile (`max-width: 768px`): vertikal gestapelt
 
 ## Artikelinhalte und Bilder
 - Text- und Bildinhalte wurden für 19 Seiten von `https://www.verlassenschaftsverfahren.at/` titelbasiert zugeordnet.
@@ -65,3 +94,4 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
 ## Wartung
 - Navbar-Änderung global auf Artikel anwenden: `bash update-nav.sh`
 - Bei Content-Updates auf korrekte Titelzuordnung + passendes Bild in `images/article_images/` achten.
+- Bei neuen Artikelseiten CTA-Block analog bestehender Artikel übernehmen und den kontextuellen CTA-Titel an das Thema anpassen.
