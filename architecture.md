@@ -71,6 +71,7 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
 ## Artikelinhalte und Bilder
 - Text- und Bildinhalte wurden für 19 Seiten von `https://www.verlassenschaftsverfahren.at/` titelbasiert zugeordnet.
 - Bildquellen liegen lokal in `images/article_images/` und werden über relative Pfade in den Artikeln eingebunden.
+- Für Dateinamen in `images/article_images/` nur ASCII-Slugs (z. B. `vorausvermaechtnis-tabelle.png`) verwenden, um Unicode-Normalisierungsprobleme auf unterschiedlichen Hostings zu vermeiden.
 - In den Fließtexten wird Hervorhebung über `<strong>` verwendet.
 
 ### Aktueller Inhaltsstatus
