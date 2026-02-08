@@ -6,6 +6,7 @@
     <title>Die Kontenöffnung im Verlassenschaftsverfahren – Verlassenschaftsverfahren.at</title>
     <link rel="stylesheet" href="../styles.css">
     <script defer src="/access/access-guard.js"></script>
+    <script defer src="../js/nav-toggle.js"></script>
 </head>
 <body>
 
@@ -44,20 +45,6 @@
             <a href="../index.html#kontakt" class="nav-cta">Beratungstermin</a>
         </div>
     </nav>
-
-    <script>
-        document.querySelector('.nav-toggle').addEventListener('click', function() {
-            this.classList.toggle('active');
-            document.querySelector('.nav-menu').classList.toggle('open');
-        });
-        document.querySelectorAll('.nav-menu a').forEach(function(link) {
-            link.addEventListener('click', function() {
-                document.querySelector('.nav-toggle').classList.remove('active');
-                document.querySelector('.nav-menu').classList.remove('open');
-            });
-        });
-    </script>
-
     <!-- Artikel-Inhalt -->
     <main class="article">
         <div class="article-content">
@@ -108,7 +95,7 @@
 
             <p>Die obigen Ausführungen zur Einsicht in konkrete Konten gegenüber der Bank durch Erben bzw. Verlassenschaft stehen natürlich unter der Prämisse, dass die betreffenden Konten bekannt sind. In der verwaltungsgerichtlichen Rechtsprechung war weiters Thema, ob die Verlassenschaft bzw. die Erben als Gesamtrechtsnachfolger des Erblassers durch einen "Eigenantrag" nach § 4 Abs 4 KontRegG in das vom Bundesminister für Finanzen geführte Kontenregister einsehen dürfen. Wie zuvor ausgeführt, hat das Kontenregister gemäß § 4 Abs 1 KontRegG den Zweck der Beweisführung in strafrechtlichen, finanzstrafrechtlichen oder abgabenrechtlichen Ermittlungsverfahren. Der VwGH sprach aus, dass auch das <strong>Recht des Erblassers auf Auskunft aus dem Kontenregister höchstpersönlich</strong> ist, sohin weder auf die Verlassenschaft noch auf die Erben übergehen kann. Bei § 4 Abs 4 KontRegG handelt es sich nur um eine (spezialgesetzliche) Ausformung des durch das Grundrecht auf Datenschutz garantierten höchstpersönlichen Anspruchs auf Auskunft (VwGH 28.05.2025, Ro 2025/13/0001). Diese Rechtsprechung des VwGH ist nachvollziehbar, weil das Kontenregister einen öffentlich-rechtlichen Zweck hat, während das Bankgeheimnis (welches nicht höchstpersönlich ist), primär dem Schutz der Interessen des Kunden dient. Damit bleibt für das "Aufspüren" unbekannter Konten wiederum nur der "Bankenrundruf" des Gerichtskommissärs über den Bankenverband übrig.</p>
 
-            <img src="../images/article_images/kontenoeffnung-verlassenschaftsverfahren.png" alt="Kontenöffnung Verlassenschaftsverfahren.png" class="article-image">
+            <img loading="lazy" src="../images/article_images/kontenoeffnung-verlassenschaftsverfahren.png" alt="Kontenöffnung Verlassenschaftsverfahren.png" class="article-image">
 
             <h2>Verlassenschaftszugehörigkeit und Inventarisierung</h2>
 
@@ -155,20 +142,23 @@
                     </div>
 
                     <div class="article-cta-image">
-                        <img src="../images/martin.webp" alt="RA Dr. Martin Cvikl">
+                        <img loading="lazy" src="../images/martin.webp" alt="RA Dr. Martin Cvikl">
                     </div>
                 </div>
             </section>
         </div>
     </main>
-
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-links">
-            <a href="../impressum.html">Impressum</a>
-            <a href="#">Datenschutz</a>
+        <div class="footer-content">
+            <div class="footer-brand">CVIKL | RECHTSANWALT</div>
+            <div class="footer-links">
+                <a href="../impressum.html">Impressum</a>
+                <a href="../index.html#">Datenschutz</a>
+                <a href="../index.html#">Cookies</a>
+            </div>
+            <p class="footer-copy">&copy; 2026 RA Dr. Martin Cvikl</p>
         </div>
-        <p>&copy; Dr. Martin Cvikl 2025</p>
     </footer>
 
 </body>

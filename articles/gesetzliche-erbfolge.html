@@ -6,6 +6,7 @@
     <title>Überblick zur gesetzlichen Erbfolge – Verlassenschaftsverfahren.at</title>
     <link rel="stylesheet" href="../styles.css">
     <script defer src="/access/access-guard.js"></script>
+    <script defer src="../js/nav-toggle.js"></script>
 </head>
 <body>
 
@@ -44,20 +45,6 @@
             <a href="../index.html#kontakt" class="nav-cta">Beratungstermin</a>
         </div>
     </nav>
-
-    <script>
-        document.querySelector('.nav-toggle').addEventListener('click', function() {
-            this.classList.toggle('active');
-            document.querySelector('.nav-menu').classList.toggle('open');
-        });
-        document.querySelectorAll('.nav-menu a').forEach(function(link) {
-            link.addEventListener('click', function() {
-                document.querySelector('.nav-toggle').classList.remove('active');
-                document.querySelector('.nav-menu').classList.remove('open');
-            });
-        });
-    </script>
-
     <!-- Artikel-Inhalt -->
     <main class="article">
         <div class="article-content">
@@ -112,15 +99,15 @@
 
             <h2>Beispiele:</h2>
 
-            <img src="../images/article_images/erste Parentel.png" alt="erste Parentel.png" class="article-image">
+            <img loading="lazy" src="../images/article_images/erste Parentel.png" alt="erste Parentel.png" class="article-image">
 
             <p>In diesem Fall erben der Ehegatte und Angehörige der ersten Parentel, also Kinder des Erblassers bzw. deren Nachkommen. Der Ehegatte erhält 1/3, die Nachkommen insgesamt 2/3. Ein Kind ist vorverstorben (grau) ohne weitere Nachkommen. Ein weiteres Kind ist vorverstorben (grau), hat aber zwei Nachkommen. Es gibt somit drei Stämme unter den Nachkommen. Die zwei Kinder erben jeweils 2/9. Die zwei Enkelkinder teilen sich ebenso 2/9 auf, sodass jeder 1/9 erbt.</p>
 
-            <img src="../images/article_images/zweite Parentel.png" alt="zweite Parentel.png" class="article-image">
+            <img loading="lazy" src="../images/article_images/zweite Parentel.png" alt="zweite Parentel.png" class="article-image">
 
             <p>In diesem Fall hat der Verstorbene keine Nachkommen und keinen Ehegatten. Es erben Angehörige der zweiten Parentel, also die Eltern und deren Nachkommen. Da die Eltern vorverstorben sind, erben die Geschwister. Gemeinsame Nachkommen beider Elternteile repräsentieren doppelt, Nachkommen nur eines Elternteils repräsentieren einfach. Wenn Mutter und Vater noch am Leben wären, würden diese je 1/2 erben. Geschwisterkind = 1/2 des Vaters + 1/4 der Mutter = 3/4, Halbgeschwisterkind = 1/4 der Mutter</p>
 
-            <img src="../images/article_images/dritte Parentel.png" alt="dritte Parentel.png" class="article-image">
+            <img loading="lazy" src="../images/article_images/dritte Parentel.png" alt="dritte Parentel.png" class="article-image">
 
             <p>In diesem Fall hat der Verstorbene keine Nachkommen, keinen Ehegatten und keine Geschwister. Es erben Angehörige der dritten Parentel, also die Großeltern und deren Nachkommen. Dabei erben die Verwandten mütterlicherseits insgesamt 1/2 und die Verwandten väterlicherseits insgesamt 1/2. Der Onkel (links) repräsentiert den Stamm mütterlicherseits zur Gänze, er erhält somit 1/2. Die zwei Cousinen väterlicherseits erhalten jeweils 1/4.</p>
             <section class="article-cta" aria-labelledby="article-cta-title">
@@ -159,20 +146,23 @@
                     </div>
 
                     <div class="article-cta-image">
-                        <img src="../images/martin.webp" alt="RA Dr. Martin Cvikl">
+                        <img loading="lazy" src="../images/martin.webp" alt="RA Dr. Martin Cvikl">
                     </div>
                 </div>
             </section>
         </div>
     </main>
-
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-links">
-            <a href="../impressum.html">Impressum</a>
-            <a href="#">Datenschutz</a>
+        <div class="footer-content">
+            <div class="footer-brand">CVIKL | RECHTSANWALT</div>
+            <div class="footer-links">
+                <a href="../impressum.html">Impressum</a>
+                <a href="../index.html#">Datenschutz</a>
+                <a href="../index.html#">Cookies</a>
+            </div>
+            <p class="footer-copy">&copy; 2026 RA Dr. Martin Cvikl</p>
         </div>
-        <p>&copy; Dr. Martin Cvikl 2025</p>
     </footer>
 
 </body>

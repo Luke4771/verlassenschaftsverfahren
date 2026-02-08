@@ -5,24 +5,29 @@ A static informational website about Austrian inheritance law (Erbrecht), operat
 
 ## Tech Stack
 - **Pure HTML5, CSS3, vanilla JavaScript** — no frameworks, no build process, no package manager
-- Single stylesheet: `styles.css` (~520 lines)
-- JavaScript is minimal (hamburger menu toggle only)
+- Single stylesheet: `styles.css` (~930 lines, includes CSS custom properties)
+- JavaScript: `js/nav-toggle.js` (shared hamburger menu) + `access/access-guard.js` (access control)
 - All content is in German
 
 ## File Structure
 ```
 ├── index.html              # Landing page (hero, topic grid, contact form, footer)
 ├── impressum.html          # Legal imprint page
-├── styles.css              # All styles in one file
-├── articles/               # 24 article pages (same navbar/footer as index)
+├── styles.css              # All styles in one file (CSS custom properties at top)
+├── js/
+│   └── nav-toggle.js       # Shared hamburger menu toggle script
+├── articles/               # 23 article pages (same navbar/footer as index)
 │   ├── ablauf-verlassenschaftsverfahren.html
-│   ├── ...                 # (24 articles total across 4 legal topic categories)
+│   ├── ...                 # (23 articles total across 4 legal topic categories)
+├── access/
+│   ├── access-guard.js     # Client-side access control guard
+│   └── login.html          # Password login page
 ├── images/
 │   ├── logo.png            # Site logo (MC monogram)
 │   ├── hero.jpg            # Hero section image
 │   └── article_images/     # Diagrams and infographics for articles (PNG)
 ├── layout reference/       # Design mockups (not part of deployed site)
-├── update-nav.sh           # Bash script to sync navbar across all article pages
+├── update-nav.sh           # Syncs top-bar, navbar & footer from index.html to all pages
 ├── architecture.md         # German-language architecture doc
 ├── design.md               # Color definitions
 └── CLAUDE.md               # AI assistant instructions
@@ -50,13 +55,16 @@ A static informational website about Austrian inheritance law (Erbrecht), operat
 4. **Erbrecht und Unternehmensrecht** (3 articles) — sole proprietorships, partnerships, GmbH shares
 
 ## Color Palette
-| Role                       | Hex       |
-|----------------------------|-----------|
-| Hero / Navbar / Footer bg  | `#36373b` |
-| Top bar / Primary buttons  | `#5A84D8` |
-| Topic boxes                | `#8ea7d8` |
-| Section backgrounds        | `#f0f0f0` |
-| Body text                  | `#333`    |
+All colors are defined as CSS custom properties in the `:root` block of `styles.css`. Key variables:
+
+| Variable                   | Hex       | Role                          |
+|----------------------------|-----------|-------------------------------|
+| `--color-primary`          | `#5A84D8` | Buttons, accents, links       |
+| `--color-nav-cta`          | `#3B6BDE` | Nav CTA button                |
+| `--color-dark-navy`        | `#1a2744` | Top bar, footer background    |
+| `--color-hero-dark-2`      | `#36373b` | Hero section background       |
+| `--color-bg-light`         | `#f0f0f0` | Section backgrounds           |
+| `--color-text`             | `#333`    | Body text                     |
 
 ## Responsive Design
 - Single breakpoint at **768px**
@@ -66,10 +74,10 @@ A static informational website about Austrian inheritance law (Erbrecht), operat
 - Hamburger menu replaces horizontal nav links
 
 ## Shared Layout Components (Top Bar, Navbar, Footer)
-The top bar, navbar, and footer are **duplicated** across three page types. When any of these components change, **all three must be updated**:
-1. **`index.html`** — the canonical source of truth (root-level paths like `images/logo.png`)
-2. **`articles/*.html`** — use `../` relative paths (e.g. `../images/logo.png`, `../index.html#home`). The script `update-nav.sh` can help batch-update these, but currently only handles specific sed replacements — verify it covers your change or update articles manually.
-3. **`impressum.html`** — root-level page, uses the same paths as `index.html`. **Not covered by `update-nav.sh`** — must always be updated manually when the layout changes.
+The top bar, navbar, and footer are **duplicated** across three page types. When any of these components change:
+1. Edit **`index.html`** — the canonical source of truth
+2. Run **`bash update-nav.sh`** — automatically syncs top-bar, navbar, and footer to all `articles/*.html` and `impressum.html`, adjusting paths correctly (`../` for articles, `index.html#` for impressum anchors)
+3. Use `bash update-nav.sh --dry-run` to preview changes before applying
 
 ## Key Conventions
 - No build step — edit files directly and deploy

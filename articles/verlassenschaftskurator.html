@@ -6,6 +6,7 @@
     <title>Wann wird ein Verlassenschaftskurator bestellt? – Verlassenschaftsverfahren.at</title>
     <link rel="stylesheet" href="../styles.css">
     <script defer src="/access/access-guard.js"></script>
+    <script defer src="../js/nav-toggle.js"></script>
 </head>
 <body>
 
@@ -44,20 +45,6 @@
             <a href="../index.html#kontakt" class="nav-cta">Beratungstermin</a>
         </div>
     </nav>
-
-    <script>
-        document.querySelector('.nav-toggle').addEventListener('click', function() {
-            this.classList.toggle('active');
-            document.querySelector('.nav-menu').classList.toggle('open');
-        });
-        document.querySelectorAll('.nav-menu a').forEach(function(link) {
-            link.addEventListener('click', function() {
-                document.querySelector('.nav-toggle').classList.remove('active');
-                document.querySelector('.nav-menu').classList.remove('open');
-            });
-        });
-    </script>
-
     <!-- Artikel-Inhalt -->
     <main class="article">
         <div class="article-content">
@@ -114,7 +101,7 @@
 
             <p>Sind allerdings mehrere Gläubiger vorhanden, oder müssen Vermögenswerte verkauft (z.B. Liegenschaft) oder aufgelöst werden (z.B. mehrere Bankkonten), so bestellt das Verlassenschaftsgericht einen Kurator, der diese Rechtshandlungen setzt, und anschließend dem Gericht einen Verteilungsentwurf übermittelt. Dies wird in der Praxis <strong>"kridamäßige Verteilung"</strong> genannt. Der Verlassenschaftskurator hat hier gewissermaßen die Funktion eines Insolvenzverwalters ("Mini-Konkurs"). Bei komplexeren Sachverhalten, etwa wenn in der überschuldeten Verlassenschaft Unternehmen oder Gesellschaftsanteile enthalten sind, wird statt der kridamäßigen Verteilung ein Verlassenschaftsinsolvenzverfahren eröffnet, und ein Insolvenzverwalter bestellt. Hierfür ist allerdings das Insolvenzgericht und nicht das Verlassenschaftsgericht zuständig.</p>
 
-            <img src="../images/article_images/gruende-bestellung-verlassenschaftskurator.png" alt="Gründe Bestellung Verlassenschaftskurator.png" class="article-image">
+            <img loading="lazy" src="../images/article_images/gruende-bestellung-verlassenschaftskurator.png" alt="Gründe Bestellung Verlassenschaftskurator.png" class="article-image">
 
             <h2>Befugnisse und Kosten des Verlassenschaftskurators</h2>
 
@@ -169,20 +156,23 @@
                     </div>
 
                     <div class="article-cta-image">
-                        <img src="../images/martin.webp" alt="RA Dr. Martin Cvikl">
+                        <img loading="lazy" src="../images/martin.webp" alt="RA Dr. Martin Cvikl">
                     </div>
                 </div>
             </section>
         </div>
     </main>
-
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-links">
-            <a href="../impressum.html">Impressum</a>
-            <a href="#">Datenschutz</a>
+        <div class="footer-content">
+            <div class="footer-brand">CVIKL | RECHTSANWALT</div>
+            <div class="footer-links">
+                <a href="../impressum.html">Impressum</a>
+                <a href="../index.html#">Datenschutz</a>
+                <a href="../index.html#">Cookies</a>
+            </div>
+            <p class="footer-copy">&copy; 2026 RA Dr. Martin Cvikl</p>
         </div>
-        <p>&copy; Dr. Martin Cvikl 2025</p>
     </footer>
 
 </body>

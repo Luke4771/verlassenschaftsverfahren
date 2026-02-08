@@ -6,6 +6,7 @@
     <title>Das gesetzliche Vorausvermächtnis von Ehegatten und Lebensgefährten – Verlassenschaftsverfahren.at</title>
     <link rel="stylesheet" href="../styles.css">
     <script defer src="/access/access-guard.js"></script>
+    <script defer src="../js/nav-toggle.js"></script>
 </head>
 <body>
 
@@ -44,20 +45,6 @@
             <a href="../index.html#kontakt" class="nav-cta">Beratungstermin</a>
         </div>
     </nav>
-
-    <script>
-        document.querySelector('.nav-toggle').addEventListener('click', function() {
-            this.classList.toggle('active');
-            document.querySelector('.nav-menu').classList.toggle('open');
-        });
-        document.querySelectorAll('.nav-menu a').forEach(function(link) {
-            link.addEventListener('click', function() {
-                document.querySelector('.nav-toggle').classList.remove('active');
-                document.querySelector('.nav-menu').classList.remove('open');
-            });
-        });
-    </script>
-
     <!-- Artikel-Inhalt -->
     <main class="article">
         <div class="article-content">
@@ -106,7 +93,7 @@
 
             <h2>Vergleich zwischen Ehegatten und Lebensgefährten</h2>
 
-            <img src="../images/article_images/vorausvermaechtnis-tabelle.png" alt="Vorausvermächtnis Tabelle.png" class="article-image">
+            <img loading="lazy" src="../images/article_images/vorausvermaechtnis-tabelle.png" alt="Vorausvermächtnis Tabelle.png" class="article-image">
             <section class="article-cta" aria-labelledby="article-cta-title">
                 <div class="article-cta-content">
                     <div class="article-cta-main">
@@ -143,20 +130,23 @@
                     </div>
 
                     <div class="article-cta-image">
-                        <img src="../images/martin.webp" alt="RA Dr. Martin Cvikl">
+                        <img loading="lazy" src="../images/martin.webp" alt="RA Dr. Martin Cvikl">
                     </div>
                 </div>
             </section>
         </div>
     </main>
-
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-links">
-            <a href="../impressum.html">Impressum</a>
-            <a href="#">Datenschutz</a>
+        <div class="footer-content">
+            <div class="footer-brand">CVIKL | RECHTSANWALT</div>
+            <div class="footer-links">
+                <a href="../impressum.html">Impressum</a>
+                <a href="../index.html#">Datenschutz</a>
+                <a href="../index.html#">Cookies</a>
+            </div>
+            <p class="footer-copy">&copy; 2026 RA Dr. Martin Cvikl</p>
         </div>
-        <p>&copy; Dr. Martin Cvikl 2025</p>
     </footer>
 
 </body>

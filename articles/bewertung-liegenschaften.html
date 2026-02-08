@@ -6,6 +6,7 @@
     <title>Wie werden Liegenschaften im Verlassenschaftsverfahren bewertet? – Verlassenschaftsverfahren.at</title>
     <link rel="stylesheet" href="../styles.css">
     <script defer src="/access/access-guard.js"></script>
+    <script defer src="../js/nav-toggle.js"></script>
 </head>
 <body>
 
@@ -44,20 +45,6 @@
             <a href="../index.html#kontakt" class="nav-cta">Beratungstermin</a>
         </div>
     </nav>
-
-    <script>
-        document.querySelector('.nav-toggle').addEventListener('click', function() {
-            this.classList.toggle('active');
-            document.querySelector('.nav-menu').classList.toggle('open');
-        });
-        document.querySelectorAll('.nav-menu a').forEach(function(link) {
-            link.addEventListener('click', function() {
-                document.querySelector('.nav-toggle').classList.remove('active');
-                document.querySelector('.nav-menu').classList.remove('open');
-            });
-        });
-    </script>
-
     <!-- Artikel-Inhalt -->
     <main class="article">
         <div class="article-content">
@@ -84,7 +71,7 @@
 
             <p>Die Bewertung einer Liegenschaft im Inventar hat über das Verlassenschaftsverfahren hinaus grundsätzlich keine (konstitutiven) Wirkungen, d.h. dem Inventar kommt lediglich <strong>Beweisfunktion </strong>zu. In der Praxis orientiert sich die Berechnung des Pflichtteils aber regelmäßig an eingeholten Bewertungsgutachten gerichtlicher Immobiliensachverständiger. Sollte allerdings die Methodik eines eingeholten Bewertungsgutachtens nachweislich unrichtig sein, ist es nicht ausgeschlossen, im Pflichtteilsprozess einen höheren Betrag geltend zu machen, und die Einholung eines neuen Sachverständigengutachtens durch das Prozessgericht zu beantragen.</p>
 
-            <img src="../images/article_images/Errichtung Inventar und Bewertung.png" alt="Errichtung Inventar und Bewertung.png" class="article-image">
+            <img loading="lazy" src="../images/article_images/Errichtung Inventar und Bewertung.png" alt="Errichtung Inventar und Bewertung.png" class="article-image">
 
             <h2>Bewertung nach dem Verkehrswert – Liegenschaftsbewertungsgesetz (LBG)</h2>
 
@@ -153,20 +140,23 @@
                     </div>
 
                     <div class="article-cta-image">
-                        <img src="../images/martin.webp" alt="RA Dr. Martin Cvikl">
+                        <img loading="lazy" src="../images/martin.webp" alt="RA Dr. Martin Cvikl">
                     </div>
                 </div>
             </section>
         </div>
     </main>
-
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-links">
-            <a href="../impressum.html">Impressum</a>
-            <a href="#">Datenschutz</a>
+        <div class="footer-content">
+            <div class="footer-brand">CVIKL | RECHTSANWALT</div>
+            <div class="footer-links">
+                <a href="../impressum.html">Impressum</a>
+                <a href="../index.html#">Datenschutz</a>
+                <a href="../index.html#">Cookies</a>
+            </div>
+            <p class="footer-copy">&copy; 2026 RA Dr. Martin Cvikl</p>
         </div>
-        <p>&copy; Dr. Martin Cvikl 2025</p>
     </footer>
 
 </body>

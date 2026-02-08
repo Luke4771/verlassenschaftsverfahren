@@ -6,6 +6,7 @@
     <title>Impressum – Verlassenschaftsverfahren.at</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="/access/access-guard.js"></script>
+    <script defer src="js/nav-toggle.js"></script>
 </head>
 <body>
 
@@ -45,19 +46,6 @@
         </div>
     </nav>
 
-    <script>
-        document.querySelector('.nav-toggle').addEventListener('click', function() {
-            this.classList.toggle('active');
-            document.querySelector('.nav-menu').classList.toggle('open');
-        });
-        document.querySelectorAll('.nav-menu a').forEach(function(link) {
-            link.addEventListener('click', function() {
-                document.querySelector('.nav-toggle').classList.remove('active');
-                document.querySelector('.nav-menu').classList.remove('open');
-            });
-        });
-    </script>
-
     <!-- Impressum Inhalt -->
     <main class="article">
         <div class="article-content">
@@ -74,9 +62,9 @@
             <p>
                 Telefon: +43 (0) 1 290 83 53<br>
                 E-Mail: office@cvikl.law<br>
-                Website: <a href="https://www.cvikl.law" style="color: #5A84D8;">https://www.cvikl.law</a>
+                Website: <a href="https://www.cvikl.law">https://www.cvikl.law</a>
             </p>
-            <p>Dr. Martin Cvikl ist Mitglied der Rechtsanwaltskammer Wien. Zuständige Aufsichtsbehörde ist der Ausschuss der Rechtsanwaltskammer Wien, Rotenturmstraße 13, 1010 Wien. Die Berufsausübung unterliegt den Regeln der Österreichischen Rechtsanwaltsordnung (RAO). Die RAO und die für die Berufsausübung geltenden Richtlinien können unter <a href="https://www.oerak.at" style="color: #5A84D8;">www.oerak.at</a> eingesehen werden.</p>
+            <p>Dr. Martin Cvikl ist Mitglied der Rechtsanwaltskammer Wien. Zuständige Aufsichtsbehörde ist der Ausschuss der Rechtsanwaltskammer Wien, Rotenturmstraße 13, 1010 Wien. Die Berufsausübung unterliegt den Regeln der Österreichischen Rechtsanwaltsordnung (RAO). Die RAO und die für die Berufsausübung geltenden Richtlinien können unter <a href="https://www.oerak.at">www.oerak.at</a> eingesehen werden.</p>
             <p>Unternehmensgegenstand ist die Ausübung der Rechtsanwaltschaft im Sinne der RAO.</p>
             <p>Diese Website dient der Präsentation der Dienstleistungen der Kanzlei und richtet sich an Klienten sowie an sonstige interessierte Personen.</p>
 

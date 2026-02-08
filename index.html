@@ -6,6 +6,7 @@
     <title>Verlassenschaftsverfahren.at – Ihr Themenportal zu Fragen rund ums Erben und Vererben</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="/access/access-guard.js"></script>
+    <script defer src="js/nav-toggle.js"></script>
 </head>
 <body>
 
@@ -44,19 +45,6 @@
             <a href="#kontakt" class="nav-cta">Beratungstermin</a>
         </div>
     </nav>
-
-    <script>
-        document.querySelector('.nav-toggle').addEventListener('click', function() {
-            this.classList.toggle('active');
-            document.querySelector('.nav-menu').classList.toggle('open');
-        });
-        document.querySelectorAll('.nav-menu a').forEach(function(link) {
-            link.addEventListener('click', function() {
-                document.querySelector('.nav-toggle').classList.remove('active');
-                document.querySelector('.nav-menu').classList.remove('open');
-            });
-        });
-    </script>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -130,7 +118,7 @@
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2659.4!2d16.3598!3d48.2005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d07984e01f9e1%3A0x2a0e5b2c1e5b3d0a!2sGetreidemarkt%201%2C%201060%20Wien!5e0!3m2!1sde!2sat!4v1700000000000"
                     width="100%"
                     height="100%"
-                    style="border:0;"
+
                     allowfullscreen=""
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">

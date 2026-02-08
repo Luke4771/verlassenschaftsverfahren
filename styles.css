@@ -1,3 +1,44 @@
+/* === CSS Custom Properties === */
+:root {
+    /* Brand Colors */
+    --color-primary: #5A84D8;
+    --color-primary-hover: #4a72c4;
+    --color-nav-cta: #3B6BDE;
+    --color-nav-cta-hover: #2f59c4;
+    --color-dark-navy: #1a2744;
+    --color-dark-title: #1f2d48;
+
+    /* Hero Gradient */
+    --color-hero-dark-1: #2a2b2f;
+    --color-hero-dark-2: #36373b;
+    --color-hero-dark-3: #2e3348;
+    --color-hero-accent: #7ba3f0;
+
+    /* Text Colors */
+    --color-text: #333;
+    --color-text-article: #444;
+    --color-text-muted: #555;
+
+    /* Background Colors */
+    --color-bg-light: #f0f0f0;
+    --color-bg-cta-card: #f3f4f6;
+    --color-bg-secondary-hover: #e9edf3;
+
+    /* CTA Card Text */
+    --color-cta-text: #495b79;
+    --color-cta-role: #6e7f9f;
+
+    /* Border & UI */
+    --color-border: #ccc;
+    --color-border-secondary: #d4d9e3;
+    --color-footer-text: #aaa;
+    --color-footer-link: #ccc;
+
+    /* Layout */
+    --max-width: 1200px;
+    --max-width-article: 800px;
+}
+
 /* === Reset & Grundlagen === */
 * {
     margin: 0;
@@ -11,7 +52,7 @@ html {
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: #333;
+    color: var(--color-text);
     line-height: 1.6;
 }
 
@@ -26,14 +67,14 @@ ul {
 
 /* === Obere Kontaktleiste === */
 .top-bar {
-    background-color: #1a2744;
+    background-color: var(--color-dark-navy);
     color: #fff;
     padding: 8px 0;
     font-size: 0.85rem;
 }
 
 .top-bar-content {
-    max-width: 1200px;
+    max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 40px;
     display: flex;
@@ -85,7 +126,7 @@ ul {
 }
 
 .navbar-content {
-    max-width: 1200px;
+    max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 40px;
     display: flex;
@@ -115,7 +156,7 @@ ul {
 }
 
 .nav-logo-name {
-    color: #333;
+    color: var(--color-text);
     font-size: 1.3rem;
     font-weight: 700;
     letter-spacing: 2px;
@@ -123,7 +164,7 @@ ul {
 }
 
 .nav-logo-title {
-    color: #3B6BDE;
+    color: var(--color-nav-cta);
     font-size: 0.7rem;
     font-weight: 600;
     letter-spacing: 3px;
@@ -139,7 +180,7 @@ ul {
 }
 
 .nav-menu a {
-    color: #333;
+    color: var(--color-text);
     font-size: 0.95rem;
     letter-spacing: 0.5px;
     transition: opacity 0.2s;
@@ -150,8 +191,8 @@ ul {
 }
 
 .nav-cta {
-    background-color: #3B6BDE;
-    color: #fff !important;
+    background-color: var(--color-nav-cta);
+    color: #fff;
     padding: 10px 24px;
     border-radius: 0;
     font-weight: 600;
@@ -160,8 +201,8 @@ ul {
 }
 
 .nav-cta:hover {
-    background-color: #2f59c4;
-    opacity: 1 !important;
+    background-color: var(--color-nav-cta-hover);
+    opacity: 1;
 }
 
 /* === Hamburger Menu === */
@@ -178,7 +219,7 @@ ul {
     display: block;
     width: 24px;
     height: 2px;
-    background-color: #333;
+    background-color: var(--color-text);
     margin: 5px 0;
     transition: transform 0.3s, opacity 0.3s;
 }
@@ -197,16 +238,16 @@ ul {
 
 /* === Hero Section === */
 .hero {
-    background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+    background: linear-gradient(to bottom, #ffffff, var(--color-bg-light));
     padding: 50px 40px;
 }
 
 .hero-content {
-    max-width: 1200px;
+    max-width: var(--max-width);
     margin: 0 auto;
     background:
         radial-gradient(circle at 75% 30%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
-        linear-gradient(135deg, #2a2b2f 0%, #36373b 40%, #2e3348 100%);
+        linear-gradient(135deg, var(--color-hero-dark-1) 0%, var(--color-hero-dark-2) 40%, var(--color-hero-dark-3) 100%);
     border-radius: 0;
     padding: 80px 60px;
     display: flex;
@@ -231,7 +272,7 @@ ul {
 .hero-divider {
     width: 100px;
     height: 3px;
-    background: linear-gradient(90deg, #5A84D8, #7ba3f0);
+    background: linear-gradient(90deg, var(--color-primary), var(--color-hero-accent));
     margin-bottom: 28px;
     border-radius: 2px;
     box-shadow: 0 0 12px rgba(90, 132, 216, 0.4);
@@ -262,7 +303,7 @@ ul {
 
 /* === Wichtige Themen Section === */
 .themen {
-    background-color: #f0f0f0;
+    background-color: var(--color-bg-light);
     padding: 80px 40px;
 }
 
@@ -273,7 +314,7 @@ ul {
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 15px;
-    color: #333;
+    color: var(--color-text);
 }
 
 .themen h2::after {
@@ -281,12 +322,12 @@ ul {
     display: block;
     width: 60px;
     height: 2px;
-    background-color: #5A84D8;
+    background-color: var(--color-primary);
     margin: 15px auto 50px;
 }
 
 .themen-grid {
-    max-width: 1200px;
+    max-width: var(--max-width);
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -294,7 +335,7 @@ ul {
 }
 
 .themen-box {
-    background-color: #5A84D8;
+    background-color: var(--color-primary);
     padding: 35px 30px;
     border-radius: 0;
     min-height: 280px;
@@ -320,7 +361,7 @@ ul {
 }
 
 .themen-box ul li::before {
-    content: "›";
+    content: "\203A";
     position: absolute;
     left: 0;
     color: rgba(255, 255, 255, 0.6);
@@ -353,6 +394,7 @@ ul {
 
 .kontakt-map iframe {
     display: block;
+    border: 0;
 }
 
 .kontakt-info {
@@ -363,12 +405,12 @@ ul {
 .kontakt-info h2 {
     font-size: 1.8rem;
     margin-bottom: 20px;
-    color: #333;
+    color: var(--color-text);
 }
 
 .kontakt-info p {
     margin-bottom: 15px;
-    color: #555;
+    color: var(--color-text-muted);
     line-height: 1.8;
 }
 
@@ -381,14 +423,14 @@ ul {
 
 .kontakt-form label {
     font-size: 0.85rem;
-    color: #555;
+    color: var(--color-text-muted);
     margin-bottom: 4px;
 }
 
 .kontakt-form input,
 .kontakt-form textarea {
     padding: 10px 12px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-border);
     border-radius: 3px;
     font-size: 0.95rem;
     font-family: inherit;
@@ -398,11 +440,11 @@ ul {
 .kontakt-form input:focus,
 .kontakt-form textarea:focus {
     outline: none;
-    border-color: #5A84D8;
+    border-color: var(--color-primary);
 }
 
 .kontakt-form button {
-    background-color: #5A84D8;
+    background-color: var(--color-primary);
     color: #fff;
     border: none;
     padding: 12px 30px;
@@ -414,18 +456,18 @@ ul {
 }
 
 .kontakt-form button:hover {
-    background-color: #4a72c4;
+    background-color: var(--color-primary-hover);
 }
 
 /* === Footer === */
 .footer {
-    background-color: #1a2744;
-    color: #aaa;
+    background-color: var(--color-dark-navy);
+    color: var(--color-footer-text);
     padding: 24px 0;
 }
 
 .footer-content {
-    max-width: 1200px;
+    max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 40px;
     display: flex;
@@ -453,7 +495,7 @@ ul {
 }
 
 .footer-links a {
-    color: #ccc;
+    color: var(--color-footer-link);
     font-size: 0.85rem;
     transition: opacity 0.2s;
 }
@@ -470,13 +512,13 @@ ul {
 }
 
 .article-content {
-    max-width: 800px;
+    max-width: var(--max-width-article);
     margin: 0 auto;
 }
 
 .article-back {
     display: inline-block;
-    color: #5A84D8;
+    color: var(--color-primary);
     margin-bottom: 30px;
     font-size: 0.95rem;
 }
@@ -485,18 +527,26 @@ ul {
     text-decoration: underline;
 }
 
+.article-content a {
+    color: var(--color-primary);
+}
+
+.article-content a:hover {
+    text-decoration: underline;
+}
+
 .article-content h1 {
     font-size: 2rem;
-    color: #333;
+    color: var(--color-text);
     font-weight: 700;
     padding-bottom: 15px;
-    border-bottom: 3px solid #5A84D8;
+    border-bottom: 3px solid var(--color-primary);
     margin-bottom: 30px;
 }
 
 .article-content h2 {
     font-size: 1.4rem;
-    color: #333;
+    color: var(--color-text);
     font-weight: 700;
     margin-top: 40px;
     margin-bottom: 20px;
@@ -505,7 +555,7 @@ ul {
 .article-content p {
     margin-bottom: 18px;
     line-height: 1.8;
-    color: #444;
+    color: var(--color-text-article);
 }
 
 .article-image {
@@ -523,13 +573,13 @@ ul {
 /* === CTA-Card auf Artikelseiten === */
 .article-cta {
     margin-top: 50px;
-    border-left: 4px solid #5A84D8;
+    border-left: 4px solid var(--color-primary);
     box-shadow: 0 10px 28px rgba(12, 24, 48, 0.1);
 }
 
 .article-cta-content {
     display: flex;
-    background-color: #f3f4f6;
+    background-color: var(--color-bg-cta-card);
     align-items: stretch;
 }
 
@@ -552,7 +602,7 @@ ul {
     grid-area: title;
     font-size: 1.68rem;
     line-height: 1.16;
-    color: #1f2d48;
+    color: var(--color-dark-title);
     margin: 0;
 }
 
@@ -567,7 +617,7 @@ ul {
 .article-cta-text {
     grid-area: text;
     margin: 0;
-    color: #495b79;
+    color: var(--color-cta-text);
     max-width: none;
     line-height: 1.6;
 }
@@ -580,14 +630,14 @@ ul {
 
 .article-cta-person-name {
     display: block;
-    color: #1f2d48;
+    color: var(--color-dark-title);
     font-size: 1.45rem;
     font-weight: 700;
     line-height: 1.3;
 }
 
 .article-cta-person-role {
-    color: #6e7f9f;
+    color: var(--color-cta-role);
     font-size: 1.05rem;
 }
 
@@ -602,7 +652,7 @@ ul {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #1f2d48;
+    color: var(--color-dark-title);
     font-weight: 600;
 }
 
@@ -616,7 +666,7 @@ ul {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: #5A84D8;
+    color: var(--color-primary);
     background: rgba(90, 132, 216, 0.1);
     font-size: 0.95rem;
     border-radius: 2px;
@@ -626,7 +676,7 @@ ul {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #1f2d48;
+    color: var(--color-dark-title);
     font-size: 1rem;
     font-weight: 600;
     line-height: 1.6;
@@ -639,7 +689,7 @@ ul {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: #5A84D8;
+    color: var(--color-primary);
     background: rgba(90, 132, 216, 0.1);
     font-size: 0.95rem;
     border-radius: 2px;
@@ -661,7 +711,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid #5A84D8;
+    border: 1px solid var(--color-primary);
     min-height: 44px;
     padding: 8px 14px;
     text-transform: uppercase;
@@ -672,22 +722,22 @@ ul {
 }
 
 .article-cta-button-primary {
-    background-color: #5A84D8;
+    background-color: var(--color-primary);
     color: #fff;
 }
 
 .article-cta-button-primary:hover {
-    background-color: #4a72c4;
-    border-color: #4a72c4;
+    background-color: var(--color-primary-hover);
+    border-color: var(--color-primary-hover);
 }
 
 .article-cta-button-secondary {
-    color: #1f2d48;
-    border-color: #d4d9e3;
+    color: var(--color-dark-title);
+    border-color: var(--color-border-secondary);
 }
 
 .article-cta-button-secondary:hover {
-    background-color: #e9edf3;
+    background-color: var(--color-bg-secondary-hover);
 }
 
 .article-cta-image {

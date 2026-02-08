@@ -1,7 +1,7 @@
 # Architektur – Verlassenschaftsverfahren.at
 
 ## Überblick
-Statische Informationswebsite zu Erbrecht/Verlassenschaft (reines HTML/CSS/kleines Inline-JS).  
+Statische Informationswebsite zu Erbrecht/Verlassenschaft (reines HTML/CSS/JS).
 Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
 
 ## Dateistruktur
@@ -9,7 +9,9 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
 /
 ├── index.html                  — Startseite
 ├── impressum.html              — Impressum
-├── styles.css                  — Zentrale Styles für alle Seiten
+├── styles.css                  — Zentrale Styles (CSS Custom Properties in :root)
+├── js/
+│   └── nav-toggle.js           — Hamburger-Menü Script (shared)
 ├── articles/                   — 23 Artikel-Unterseiten
 ├── images/
 │   ├── logo.png
@@ -19,7 +21,7 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
 ├── layout reference/           — Design-Referenzmaterial (nicht produktiv)
 ├── about.md                    — Projektbeschreibung
 ├── design.md                   — Farbdefinitionen
-├── update-nav.sh               — Synchronisiert Navbar in allen Artikeln
+├── update-nav.sh               — Synchronisiert Top-Bar, Navbar und Footer in allen Seiten
 ├── architecture.md             — Diese Datei
 └── CLAUDE.md                   — Agent-Hinweise
 ```
@@ -83,14 +85,12 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
   `articles/pflichtteilsrecht.html`
 
 ## Styling und Responsivität
-- Zentrale Farbwerte:
-  - Hero/Navbar/Footer: `#36373b`
-  - Top-Bar/Buttons: `#5A84D8`
-  - Themenboxen: `#8ea7d8`
-  - Sektion-Hintergrund: `#f0f0f0`
+- Alle Farben und Layout-Werte als CSS Custom Properties in `:root` (Beginn von `styles.css`)
+- Zentrale Variablen: `--color-primary`, `--color-dark-navy`, `--color-bg-light`, `--color-text` etc.
 - Breakpoint bei `768px`:
   - Navigation wird zu Hamburger-Menü
   - Grid/Spalten werden gestapelt
+- Bilder auf Artikelseiten verwenden `loading="lazy"` für Performance
 
 ## Zugangsschutz (einfach, clientseitig)
 - Für Netlify Free ist ein einfacher Passwort-Schutz direkt im Frontend umgesetzt.
@@ -111,6 +111,7 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
   - Dies ist bewusst ein einfacher Schutz zur Zugriffsbeschränkung, aber kein vollständiger Perimeter-Schutz wie Cloudflare Access oder Netlify Password Protection (Paid).
 
 ## Wartung
-- Navbar-Änderung global auf Artikel anwenden: `bash update-nav.sh`
+- Top-Bar/Navbar/Footer ändern: zuerst in `index.html`, dann `bash update-nav.sh`
+- Vorschau der Änderungen: `bash update-nav.sh --dry-run`
 - Bei Content-Updates auf korrekte Titelzuordnung + passendes Bild in `images/article_images/` achten.
 - Bei neuen Artikelseiten CTA-Block analog bestehender Artikel übernehmen und den kontextuellen CTA-Titel an das Thema anpassen.
