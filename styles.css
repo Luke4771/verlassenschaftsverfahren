@@ -915,6 +915,12 @@ ul {
     color: #fff;
 }
 
+.article-cta-button-primary:visited,
+.article-cta-button-primary:hover,
+.article-cta-button-primary:focus-visible {
+    color: #fff;
+}
+
 .article-cta-button-primary:hover {
     background-color: var(--color-primary-hover);
     border-color: var(--color-primary-hover);
