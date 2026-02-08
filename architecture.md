@@ -31,8 +31,16 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
 2. Navbar (`.navbar`) mit Logo, Links, Mobile-Toggle
 3. Hero (`.hero`) mit Intro-Text und Bild
 4. Themenübersicht (`.themen`) als 2x2-Grid mit Artikellinks
-5. Kontakt (`.kontakt`) mit Karte + Formular
+5. Kontakt (`.kontakt`) mit Karte links (`.kontakt-map`) und rechtem Kontakt-Panel (`.kontakt-info > .kontakt-panel`) inkl. strukturierter Kontaktdaten (`dl.kontakt-meta`) + Formular
 6. Footer (`.footer`)
+
+## Kontaktsektion (Startseite)
+- Desktop-Layout bleibt zweispaltig: Google-Map links, Kontaktbereich rechts.
+- Der rechte Bereich ist als Card aufgebaut (`.kontakt-panel`) und enthält:
+  - Überschrift (`h2`)
+  - Strukturierte Kontaktdaten als Definitionsliste (`dl.kontakt-meta` mit `.kontakt-meta-row`, `dt`, `dd`)
+  - Kontaktformular (`.kontakt-form`)
+- Formularverhalten unverändert: Platzhalter-Submit über `onsubmit="return false;"` (kein Backend-Post).
 
 ## Artikelaufbau (articles/*.html)
 - Gemeinsamer Header/Footer wie Startseite

@@ -399,71 +399,147 @@ ul {
 
 .kontakt-info {
     flex: 1;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    padding: 0;
+    background-color: #fff;
+}
+
+.kontakt-panel {
+    width: 100%;
+    max-width: none;
+    min-height: 100%;
+    background-color: #fff;
+    border: 1px solid var(--color-border-secondary);
+    border-radius: 0;
+    box-shadow: none;
     padding: 50px 40px;
 }
 
 .kontakt-info h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
     color: var(--color-text);
 }
 
-.kontakt-info p {
-    margin-bottom: 15px;
+.kontakt-info h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: var(--color-primary);
+    margin: 15px 0 30px;
+}
+
+.kontakt-meta {
+    margin-bottom: 26px;
+}
+
+.kontakt-meta-row {
+    display: grid;
+    grid-template-columns: 140px minmax(0, 1fr);
+    align-items: center;
+    gap: 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid #edf1f7;
+}
+
+.kontakt-meta-row:last-child {
+    border-bottom: none;
+}
+
+.kontakt-meta dt {
+    margin: 0;
+    font-size: 0.75rem;
+    font-weight: 600;
     color: var(--color-text-muted);
-    line-height: 1.8;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.kontakt-meta dd {
+    margin: 0;
+    color: var(--color-text);
+    font-size: 1rem;
+    line-height: 1.4;
 }
 
 /* === Kontaktformular === */
 .kontakt-form {
-    margin-top: 25px;
+    margin-top: 24px;
     display: flex;
     flex-direction: column;
 }
 
 .kontakt-form label {
-    font-size: 0.85rem;
+    font-size: 0.78rem;
+    font-weight: 600;
     color: var(--color-text-muted);
-    margin-bottom: 4px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
 }
 
 .kontakt-form input,
 .kontakt-form textarea {
-    padding: 10px 12px;
-    border: 1px solid var(--color-border);
-    border-radius: 3px;
+    padding: 12px 14px;
+    border: 1px solid var(--color-border-secondary);
+    border-radius: 6px;
     font-size: 0.95rem;
     font-family: inherit;
-    margin-bottom: 15px;
+    background-color: #fff;
+    margin-bottom: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.kontakt-form textarea {
+    min-height: 130px;
+    resize: vertical;
 }
 
 .kontakt-form input:focus,
 .kontakt-form textarea:focus {
     outline: none;
     border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(90, 132, 216, 0.18);
 }
 
 .kontakt-form button {
     background-color: var(--color-primary);
     color: #fff;
-    border: none;
-    padding: 12px 30px;
-    font-size: 1rem;
+    border: 1px solid var(--color-primary);
+    padding: 12px 28px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
     border-radius: 0;
     cursor: pointer;
     align-self: flex-end;
-    transition: background-color 0.2s;
+    min-width: 170px;
+    box-shadow: 0 8px 18px rgba(90, 132, 216, 0.24);
+    transition: background-color 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
 .kontakt-form button:hover {
     background-color: var(--color-primary-hover);
+    border-color: var(--color-primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(74, 114, 196, 0.28);
 }
 
 /* === Footer === */
 .footer {
     background-color: var(--color-dark-navy);
-    color: var(--color-footer-text);
+    color: #fff;
     padding: 24px 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
 .footer-content {
@@ -477,9 +553,9 @@ ul {
 
 .footer-brand {
     color: #fff;
-    font-weight: 700;
-    font-size: 0.85rem;
-    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     flex: 1;
 }
@@ -492,11 +568,14 @@ ul {
 .footer-copy {
     flex: 1;
     text-align: right;
+    font-size: 0.9rem;
+    color: #fff;
 }
 
 .footer-links a {
-    color: var(--color-footer-link);
-    font-size: 0.85rem;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 400;
     transition: opacity 0.2s;
 }
 
@@ -920,7 +999,28 @@ ul {
     }
 
     .kontakt-info {
+        padding: 0;
+    }
+
+    .kontakt-panel {
+        max-width: none;
+        min-height: auto;
         padding: 30px 20px;
+        border-radius: 0;
+    }
+
+    .kontakt-meta {
+        margin-bottom: 22px;
+    }
+
+    .kontakt-meta-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+        padding: 9px 0;
+    }
+
+    .kontakt-form button {
+        min-width: 150px;
     }
 
     .footer-content {
@@ -928,5 +1028,9 @@ ul {
         gap: 15px;
         text-align: center;
         padding: 0 20px;
+    }
+
+    .footer-copy {
+        text-align: center;
     }
 }

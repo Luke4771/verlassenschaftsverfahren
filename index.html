@@ -125,18 +125,36 @@
                 </iframe>
             </div>
             <div class="kontakt-info">
-                <h2>Kontakt</h2>
-                <p>RA Dr. Martin Cvikl<br>Getreidemarkt 1<br>1060 Wien</p>
-                <p>Tel: &nbsp; +43 (0) 1 290 83 53<br>Mail: &nbsp;office@cvikl.law</p>
-                <form class="kontakt-form" onsubmit="return false;">
-                    <label for="name">Name *</label>
-                    <input type="text" id="name" name="name" required>
-                    <label for="email">Email *</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="nachricht">Nachricht *</label>
-                    <textarea id="nachricht" name="nachricht" rows="4" required></textarea>
-                    <button type="submit">Senden</button>
-                </form>
+                <div class="kontakt-panel">
+                    <h2>Kontakt</h2>
+                    <dl class="kontakt-meta">
+                        <div class="kontakt-meta-row">
+                            <dt>Kanzlei</dt>
+                            <dd>RA Dr. Martin Cvikl</dd>
+                        </div>
+                        <div class="kontakt-meta-row">
+                            <dt>Adresse</dt>
+                            <dd>Getreidemarkt 1, 1060 Wien</dd>
+                        </div>
+                        <div class="kontakt-meta-row">
+                            <dt>Tel</dt>
+                            <dd>+43 (0) 1 290 83 53</dd>
+                        </div>
+                        <div class="kontakt-meta-row">
+                            <dt>Mail</dt>
+                            <dd>office@cvikl.law</dd>
+                        </div>
+                    </dl>
+                    <form class="kontakt-form" onsubmit="return false;">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="nachricht">Nachricht *</label>
+                        <textarea id="nachricht" name="nachricht" rows="4" required></textarea>
+                        <button type="submit">Senden</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -150,7 +168,7 @@
                 <a href="#">Datenschutz</a>
                 <a href="#">Cookies</a>
             </div>
-            <p class="footer-copy">&copy; 2026 RA Dr. Martin Cvikl</p>
+            <p class="footer-copy">&copy; 2026</p>
         </div>
     </footer>
 
