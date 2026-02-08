@@ -604,9 +604,9 @@ ul {
 }
 
 .kontakt-form button {
-    background-color: var(--color-primary);
+    background-color: var(--color-nav-cta);
     color: #fff;
-    border: 1px solid var(--color-primary);
+    border: 1px solid var(--color-nav-cta);
     padding: 12px 28px;
     font-size: 0.95rem;
     font-weight: 600;
@@ -620,8 +620,8 @@ ul {
 }
 
 .kontakt-form button:hover {
-    background-color: var(--color-primary-hover);
-    border-color: var(--color-primary-hover);
+    background-color: var(--color-nav-cta-hover);
+    border-color: var(--color-nav-cta-hover);
     transform: translateY(-1px);
     box-shadow: 0 10px 20px rgba(74, 114, 196, 0.28);
 }
