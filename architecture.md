@@ -107,6 +107,8 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
   - Name (`.article-cta-person-name`) prominent, aber kompakt.
   - Rolle (`.article-cta-person-role`) kleiner, ruhiger und bewusst dünner gesetzt (`font-weight: 400`).
   - Kontaktzeilen (`.article-cta-contact-item`, `.article-cta-address`) leicht über Fließtextgröße mit mittlerem Gewicht für bessere Lesbarkeit.
+- Farbkonvention CTA-Card:
+  - Primäre CTA-Buttons und CTA-Iconakzente nutzen dieselbe Blaupalette wie andere Hauptbuttons (`--color-nav-cta` / `--color-nav-cta-hover`) für konsistente UI-Führung.
 
 ## Artikelinhalte und Bilder
 - Text- und Bildinhalte wurden für 19 Seiten von `https://www.verlassenschaftsverfahren.at/` titelbasiert zugeordnet.

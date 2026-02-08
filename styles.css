@@ -780,7 +780,7 @@ ul {
 /* === CTA-Card auf Artikelseiten === */
 .article-cta {
     margin-top: 50px;
-    border-left: 4px solid var(--color-primary);
+    border-left: 4px solid var(--color-nav-cta);
     box-shadow: 0 10px 28px rgba(12, 24, 48, 0.1);
 }
 
@@ -883,7 +883,7 @@ ul {
     align-items: center;
     justify-content: center;
     color: transparent;
-    background: rgba(90, 132, 216, 0.1);
+    background: rgba(59, 107, 222, 0.12);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 16px 16px;
@@ -917,7 +917,7 @@ ul {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: rgba(90, 132, 216, 0.1);
+    background: rgba(59, 107, 222, 0.12);
     background-image: url("images/icons/map-pin-blue.svg");
     background-repeat: no-repeat;
     background-position: center;
@@ -941,7 +941,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid var(--color-primary);
+    border: 1px solid var(--color-nav-cta);
     min-height: 44px;
     padding: 8px 14px;
     text-transform: uppercase;
@@ -952,7 +952,7 @@ ul {
 }
 
 .article-cta-button-primary {
-    background-color: var(--color-primary);
+    background-color: var(--color-nav-cta);
     color: #fff;
 }
 
@@ -963,8 +963,8 @@ ul {
 }
 
 .article-cta-button-primary:hover {
-    background-color: var(--color-primary-hover);
-    border-color: var(--color-primary-hover);
+    background-color: var(--color-nav-cta-hover);
+    border-color: var(--color-nav-cta-hover);
 }
 
 .article-cta-button-secondary {
