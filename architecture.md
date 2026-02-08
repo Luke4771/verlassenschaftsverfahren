@@ -18,6 +18,7 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
 │   ├── logo.png
 │   ├── hero.jpg
 │   ├── martin.webp
+│   ├── icons/                 — UI-SVG-Icons (Top-Bar, Artikel-CTA)
 │   └── article_images/         — Diagramme/Grafiken für Artikel
 ├── layout reference/           — Design-Referenzmaterial (nicht produktiv)
 ├── about.md                    — Projektbeschreibung
@@ -35,6 +36,21 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
 5. Themenübersicht (`.themen`) als 2x2-Grid mit Artikellinks
 6. Kontakt (`.kontakt`) mit Karte links (`.kontakt-map`) und rechtem Kontakt-Panel (`.kontakt-info > .kontakt-panel`) inkl. strukturierter Kontaktdaten (`dl.kontakt-meta`) + Formular
 7. Footer (`.footer`)
+
+### Icon-Assets (Top-Bar und CTA)
+- Quelle: Heroicons (Outline) als lokale SVG-Dateien in `images/icons/`.
+- Verwendete Dateien:
+  - `images/icons/phone.svg`
+  - `images/icons/envelope.svg`
+  - `images/icons/map-pin.svg`
+  - `images/icons/phone-blue.svg`
+  - `images/icons/envelope-blue.svg`
+  - `images/icons/map-pin-blue.svg`
+- Einbindung:
+  - Top-Bar via `span.top-bar-icon` + `background-image` in `styles.css`
+  - Artikel-CTA (Mail/Telefon/Adresse inkl. Rückruf-Button) via bestehende Klassen in `styles.css`
+- Wichtige Regel:
+  - Keine CSS-Masken verwenden; direkte SVG-`background-image`-Einbindung ist robuster über Browser hinweg.
 
 ## Hero-Glas-CTA (Startseite)
 - Komponente in `index.html` direkt unter `.hero-content`: `.hero-overlay` mit Linkkarte `.hero-glass-card`

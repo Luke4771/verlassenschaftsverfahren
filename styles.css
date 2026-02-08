@@ -106,13 +106,27 @@ ul {
     opacity: 0.7;
 }
 
-.top-bar .top-bar-mail-icon {
+.top-bar .top-bar-icon {
+    width: 16px;
+    height: 16px;
     display: inline-block;
-    font-size: 1.45em;
-    line-height: 1;
-    margin-right: 0.08em;
-    vertical-align: -0.12em;
-    font-family: "Segoe UI Symbol", "Apple Symbols", "Noto Sans Symbols", sans-serif;
+    margin-right: 4px;
+    vertical-align: -0.2em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 16px;
+}
+
+.top-bar .top-bar-phone-icon {
+    background-image: url("images/icons/phone.svg");
+}
+
+.top-bar .top-bar-mail-icon {
+    background-image: url("images/icons/envelope.svg");
+}
+
+.top-bar .top-bar-address-icon {
+    background-image: url("images/icons/map-pin.svg");
 }
 
 /* === Navigationsleiste === */
@@ -855,10 +869,22 @@ ul {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-primary);
+    color: transparent;
     background: rgba(90, 132, 216, 0.1);
-    font-size: 0.95rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 16px;
+    font-size: 0;
+    line-height: 0;
     border-radius: 2px;
+}
+
+.article-cta-contact-item[href^="mailto:"] .article-cta-contact-icon {
+    background-image: url("images/icons/envelope-blue.svg");
+}
+
+.article-cta-contact-item[href^="tel:"] .article-cta-contact-icon {
+    background-image: url("images/icons/phone-blue.svg");
 }
 
 .article-cta-address {
@@ -872,15 +898,17 @@ ul {
 }
 
 .article-cta-address::before {
-    content: "\2302";
+    content: "";
     width: 24px;
     height: 24px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-primary);
     background: rgba(90, 132, 216, 0.1);
-    font-size: 0.95rem;
+    background-image: url("images/icons/map-pin-blue.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 16px;
     border-radius: 2px;
     flex: 0 0 24px;
 }
@@ -933,6 +961,18 @@ ul {
 
 .article-cta-button-secondary:hover {
     background-color: var(--color-bg-secondary-hover);
+}
+
+.article-cta-button-secondary span[aria-hidden="true"] {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    color: transparent;
+    font-size: 0;
+    background-image: url("images/icons/phone-blue.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 16px;
 }
 
 .article-cta-image {
