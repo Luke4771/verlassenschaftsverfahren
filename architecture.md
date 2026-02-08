@@ -30,7 +30,7 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
 
 ## Seitenaufbau (Startseite)
 1. Top-Bar (`.top-bar`) mit Kontaktinfos
-2. Navbar (`.navbar`) mit Logo, Links, Mobile-Toggle
+2. Navbar (`.navbar`) mit Logo-Block (`CVIKL`, `RECHTSANWALT`, `Verlassenschaftsverfahren.at`), Links, Mobile-Toggle
 3. Hero (`.hero`) mit Intro-Text und Bild
 4. Überlappende Hero-Glas-CTA (`.hero-overlay` > `.hero-glass-card`) links unter dem Hero-Bereich, mit visueller Überlagerung in die Themen-Sektion
 5. Themenübersicht (`.themen`) als 2x2-Grid mit Artikellinks

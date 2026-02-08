@@ -5,7 +5,7 @@
     --color-primary-hover: #4a72c4;
     --color-nav-cta: #3B6BDE;
     --color-nav-cta-hover: #2f59c4;
-    --color-dark-navy: #1a2744;
+    --color-dark-navy: #12254f;
     --color-dark-title: #1f2d48;
 
     /* Hero Gradient */
@@ -187,6 +187,14 @@ ul {
     font-weight: 600;
     letter-spacing: 3px;
     text-transform: uppercase;
+}
+
+.nav-logo-subtitle {
+    color: var(--color-text-muted);
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    line-height: 1.2;
 }
 
 .nav-menu {

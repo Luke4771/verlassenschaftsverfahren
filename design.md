@@ -7,7 +7,7 @@ All colors are defined as CSS custom properties in the `:root` block at the top 
 - `--color-nav-cta-hover: #2f59c4` — Nav CTA hover
 
 ## Dark Backgrounds
-- `--color-dark-navy: #1a2744` — Top bar, footer
+- `--color-dark-navy: #12254f` — Top bar, footer
 - `--color-hero-dark-1: #2a2b2f` — Hero gradient start
 - `--color-hero-dark-2: #36373b` — Hero gradient mid
 - `--color-hero-dark-3: #2e3348` — Hero gradient end
