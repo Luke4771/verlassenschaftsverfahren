@@ -30,9 +30,16 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
 1. Top-Bar (`.top-bar`) mit Kontaktinfos
 2. Navbar (`.navbar`) mit Logo, Links, Mobile-Toggle
 3. Hero (`.hero`) mit Intro-Text und Bild
-4. Themenübersicht (`.themen`) als 2x2-Grid mit Artikellinks
-5. Kontakt (`.kontakt`) mit Karte links (`.kontakt-map`) und rechtem Kontakt-Panel (`.kontakt-info > .kontakt-panel`) inkl. strukturierter Kontaktdaten (`dl.kontakt-meta`) + Formular
-6. Footer (`.footer`)
+4. Überlappende Hero-Glas-CTA (`.hero-overlay` > `.hero-glass-card`) links unter dem Hero-Bereich, mit visueller Überlagerung in die Themen-Sektion
+5. Themenübersicht (`.themen`) als 2x2-Grid mit Artikellinks
+6. Kontakt (`.kontakt`) mit Karte links (`.kontakt-map`) und rechtem Kontakt-Panel (`.kontakt-info > .kontakt-panel`) inkl. strukturierter Kontaktdaten (`dl.kontakt-meta`) + Formular
+7. Footer (`.footer`)
+
+## Hero-Glas-CTA (Startseite)
+- Komponente in `index.html` direkt unter `.hero-content`: `.hero-overlay` mit Linkkarte `.hero-glass-card`
+- Zweck: prominenter, klickbarer Einstieg zur Kontaktsektion (`href="#kontakt"`)
+- Design: transluzenter/glossy Card-Look (Gradient + `backdrop-filter` + weiche Schatten) mit klarer Typografie ohne Icon
+- Layout: Desktop überlappt die Grenze zwischen Hero und Themenbereich; mobil wird die Komponente normal im Fluss ohne Überlagerung dargestellt
 
 ## Kontaktsektion (Startseite)
 - Desktop-Layout bleibt zweispaltig: Google-Map links, Kontaktbereich rechts.

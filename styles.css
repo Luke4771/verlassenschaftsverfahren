@@ -240,6 +240,7 @@ ul {
 .hero {
     background: linear-gradient(to bottom, #ffffff, var(--color-bg-light));
     padding: 50px 40px;
+    position: relative;
 }
 
 .hero-content {
@@ -301,10 +302,102 @@ ul {
     display: block;
 }
 
+.hero-overlay {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    height: 0;
+    position: relative;
+    z-index: 3;
+}
+
+.hero-glass-card {
+    position: absolute;
+    left: clamp(18px, 4vw, 46px);
+    bottom: -78px;
+    width: min(320px, calc(100% - 36px));
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    align-items: start;
+    padding: 18px 18px 16px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.74);
+    background:
+        linear-gradient(130deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.9) 70%, rgba(245, 248, 255, 0.84) 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow:
+        0 12px 22px rgba(20, 35, 63, 0.16),
+        0 6px 10px rgba(45, 72, 125, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.78);
+    overflow: hidden;
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.hero-glass-card::before {
+    content: "";
+    position: absolute;
+    top: -38px;
+    right: -48px;
+    width: 170px;
+    height: 130px;
+    background: radial-gradient(circle at 48% 52%, rgba(255, 255, 255, 0.72) 0%, rgba(255, 255, 255, 0.3) 46%, rgba(255, 255, 255, 0) 73%);
+    pointer-events: none;
+}
+
+.hero-glass-card::after {
+    content: "";
+    position: absolute;
+    left: 48%;
+    bottom: -10px;
+    width: 120px;
+    height: 20px;
+    transform: translateX(-50%);
+    background: radial-gradient(circle, rgba(25, 39, 68, 0.12) 0%, rgba(25, 39, 68, 0) 72%);
+    filter: blur(5px);
+    pointer-events: none;
+}
+
+.hero-glass-card:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 14px 24px rgba(20, 35, 63, 0.22),
+        0 7px 12px rgba(45, 72, 125, 0.14),
+        inset 0 1px 0 rgba(255, 255, 255, 0.82);
+}
+
+.hero-glass-card:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
+.hero-glass-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.hero-glass-title {
+    color: #1e2c49;
+    font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.hero-glass-text {
+    color: #2b3f63;
+    font-size: clamp(0.9rem, 1.04vw, 1rem);
+    line-height: 1.5;
+    font-weight: 500;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.34);
+    max-width: 28ch;
+}
+
 /* === Wichtige Themen Section === */
 .themen {
     background-color: var(--color-bg-light);
-    padding: 80px 40px;
+    padding: 138px 40px 80px;
 }
 
 .themen h2 {
@@ -979,6 +1072,48 @@ ul {
         height: 220px;
         align-self: auto;
         margin: 0;
+    }
+
+    .hero-overlay {
+        max-width: none;
+        margin: 18px 0 0;
+        height: auto;
+    }
+
+    .hero-glass-card {
+        position: static;
+        left: auto;
+        bottom: auto;
+        width: 100%;
+        max-width: none;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+        padding: 18px;
+        border-radius: 16px;
+        text-align: left;
+    }
+
+    .hero-glass-card::before {
+        top: -58px;
+        right: -92px;
+        width: 240px;
+        height: 190px;
+    }
+
+    .hero-glass-card::after {
+        width: 160px;
+        height: 28px;
+        left: 50%;
+        bottom: 4px;
+    }
+
+    .hero-glass-title {
+        font-size: 1.45rem;
+    }
+
+    .hero-glass-text {
+        font-size: 0.98rem;
+        max-width: none;
     }
 
     .themen {
