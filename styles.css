@@ -47,6 +47,15 @@ ul {
     opacity: 0.7;
 }
 
+.top-bar .top-bar-mail-icon {
+    display: inline-block;
+    font-size: 1.45em;
+    line-height: 1;
+    margin-right: 0.08em;
+    vertical-align: -0.12em;
+    font-family: "Segoe UI Symbol", "Apple Symbols", "Noto Sans Symbols", sans-serif;
+}
+
 /* === Navigationsleiste === */
 .navbar {
     background-color: #36373b;
