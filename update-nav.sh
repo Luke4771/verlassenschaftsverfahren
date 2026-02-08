@@ -70,6 +70,7 @@ def adjust_for_articles(block):
     block = block.replace('href="#', 'href="../index.html#')
     block = block.replace('href="index.html', 'href="../index.html')
     block = block.replace('href="impressum.html', 'href="../impressum.html')
+    block = block.replace('href="datenschutz.html', 'href="../datenschutz.html')
     block = block.replace('src="images/', 'src="../images/')
     block = block.replace('src="js/', 'src="../js/')
     return block

@@ -9,6 +9,7 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
 /
 ├── index.html                  — Startseite
 ├── impressum.html              — Impressum
+├── datenschutz.html            — Datenschutzerklärung
 ├── styles.css                  — Zentrale Styles (CSS Custom Properties in :root)
 ├── js/
 │   └── nav-toggle.js           — Hamburger-Menü Script (shared)
@@ -115,6 +116,7 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
 - Geschützte Seiten:
   - `index.html`
   - `impressum.html`
+  - `datenschutz.html`
   - alle `articles/*.html`
 - Mechanik:
   - Bei korrektem Passwort setzt die Login-Seite `sessionStorage["site_access_granted"] = "1"`.
