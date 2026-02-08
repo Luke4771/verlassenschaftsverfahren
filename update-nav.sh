@@ -4,7 +4,8 @@
 # Verwendung: bash update-nav.sh
 
 for file in articles/*.html; do
-  sed -i '' 's/>Wichtige Themen</>Themenübersicht</g' "$file"
+  # Kontakt -> Beratungstermin CTA
+  sed -i '' 's|<li><a href="../index.html#kontakt">Kontakt</a></li>|<li><a href="../index.html#kontakt" class="nav-cta">Beratungstermin</a></li>|g' "$file"
   echo "Aktualisiert: $file"
 done
 

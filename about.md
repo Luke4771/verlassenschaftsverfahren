@@ -29,12 +29,12 @@ A static informational website about Austrian inheritance law (Erbrecht), operat
 ```
 
 ## Page Architecture (index.html)
-1. **Top Bar** (`.top-bar`) — blue bar with contact info (phone, email, address)
-2. **Navbar** (`.navbar`) — sticky, logo left, 3 centered links (Home, Themenübersicht, Kontakt), hamburger on mobile
+1. **Top Bar** (`.top-bar`) — blue bar with three-column layout: name left (`.top-bar-left`), phone/email center (`.top-bar-center`), address right (`.top-bar-right`)
+2. **Navbar** (`.navbar` > `.navbar-content`) — sticky, logo + text left (`.nav-logo` with `.nav-logo-text`), 2 centered links (Home, Themenübersicht), CTA button right (`.nav-cta` "Beratungstermin"), hamburger on mobile
 3. **Hero** (`.hero`) — title + tagline left, image right; stacks vertically on mobile
 4. **Themenübersicht** (`.themen`) — 2x2 grid of topic boxes, each containing article links
 5. **Kontakt** (`.kontakt`) — Google Maps embed + contact form side by side
-6. **Footer** (`.footer`) — Impressum/Datenschutz links, copyright
+6. **Footer** (`.footer` > `.footer-content`) — brand text (`.footer-brand`), links (Impressum/Datenschutz/Cookies), copyright
 
 ## Article Pages (`/articles/`)
 - Share the same navbar and footer as the landing page
@@ -64,6 +64,12 @@ A static informational website about Austrian inheritance law (Erbrecht), operat
 - Hero stacks vertically (text above image)
 - Contact section stacks vertically
 - Hamburger menu replaces horizontal nav links
+
+## Shared Layout Components (Top Bar, Navbar, Footer)
+The top bar, navbar, and footer are **duplicated** across three page types. When any of these components change, **all three must be updated**:
+1. **`index.html`** — the canonical source of truth (root-level paths like `images/logo.png`)
+2. **`articles/*.html`** — use `../` relative paths (e.g. `../images/logo.png`, `../index.html#home`). The script `update-nav.sh` can help batch-update these, but currently only handles specific sed replacements — verify it covers your change or update articles manually.
+3. **`impressum.html`** — root-level page, uses the same paths as `index.html`. **Not covered by `update-nav.sh`** — must always be updated manually when the layout changes.
 
 ## Key Conventions
 - No build step — edit files directly and deploy

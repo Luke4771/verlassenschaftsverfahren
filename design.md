@@ -1,2 +1,4 @@
 Hero Background Color: #36373b
-Navbar Background Color: #5A84D8
+Top Bar Background Color: #1a2744
+Navbar Background Color: #36373b
+CTA Button Color: #3B6BDE

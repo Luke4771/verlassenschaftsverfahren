@@ -26,7 +26,7 @@ ul {
 
 /* === Obere Kontaktleiste === */
 .top-bar {
-    background-color: #5A84D8;
+    background-color: #1a2744;
     color: #fff;
     padding: 8px 0;
     font-size: 0.85rem;
@@ -35,12 +35,30 @@ ul {
 .top-bar-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 8px;
     flex-wrap: wrap;
+}
+
+.top-bar-left {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.top-bar-center {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 .top-bar .separator {
@@ -58,25 +76,58 @@ ul {
 
 /* === Navigationsleiste === */
 .navbar {
-    background-color: #36373b;
-    display: flex;
-    align-items: center;
-    padding: 12px 40px;
+    background-color: #ffffff;
     position: sticky;
     top: 0;
     z-index: 100;
+    padding: 6px 0;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.navbar-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
 }
 
 .nav-logo {
     display: flex;
     align-items: center;
+    margin-left: -12px;
 }
 
 .nav-logo img {
-    height: 72px;
+    height: 88px;
     width: auto;
-    margin: -10px 0;
+    margin: -12px 0;
     display: block;
+    filter: invert(1);
+}
+
+.nav-logo-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.nav-logo-name {
+    color: #333;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+.nav-logo-title {
+    color: #3B6BDE;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
 .nav-menu {
@@ -88,7 +139,7 @@ ul {
 }
 
 .nav-menu a {
-    color: #fff;
+    color: #333;
     font-size: 0.95rem;
     letter-spacing: 0.5px;
     transition: opacity 0.2s;
@@ -96,6 +147,21 @@ ul {
 
 .nav-menu a:hover {
     opacity: 0.7;
+}
+
+.nav-cta {
+    background-color: #3B6BDE;
+    color: #fff !important;
+    padding: 10px 24px;
+    border-radius: 0;
+    font-weight: 600;
+    margin-left: auto;
+    transition: background-color 0.2s;
+}
+
+.nav-cta:hover {
+    background-color: #2f59c4;
+    opacity: 1 !important;
 }
 
 /* === Hamburger Menu === */
@@ -112,7 +178,7 @@ ul {
     display: block;
     width: 24px;
     height: 2px;
-    background-color: #fff;
+    background-color: #333;
     margin: 5px 0;
     transition: transform 0.3s, opacity 0.3s;
 }
@@ -131,7 +197,7 @@ ul {
 
 /* === Hero Section === */
 .hero {
-    background: #f0f0f0;
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0);
     padding: 50px 40px;
 }
 
@@ -341,7 +407,7 @@ ul {
     border: none;
     padding: 12px 30px;
     font-size: 1rem;
-    border-radius: 3px;
+    border-radius: 0;
     cursor: pointer;
     align-self: flex-end;
     transition: background-color 0.2s;
@@ -353,31 +419,47 @@ ul {
 
 /* === Footer === */
 .footer {
-    background-color: #36373b;
+    background-color: #1a2744;
     color: #aaa;
-    text-align: center;
-    padding: 30px 20px;
+    padding: 24px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-brand {
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    flex: 1;
 }
 
 .footer-links {
-    margin-bottom: 15px;
     display: flex;
-    justify-content: center;
     gap: 30px;
+}
+
+.footer-copy {
+    flex: 1;
+    text-align: right;
 }
 
 .footer-links a {
     color: #ccc;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     transition: opacity 0.2s;
 }
 
 .footer-links a:hover {
     opacity: 0.7;
-}
-
-.footer p {
-    font-size: 0.85rem;
 }
 
 /* === Artikel-Seite === */
@@ -623,15 +705,42 @@ ul {
 @media (max-width: 768px) {
     .top-bar-content {
         font-size: 0.75rem;
-        gap: 5px;
+        gap: 4px 12px;
+        justify-content: center;
+        padding: 0 20px;
     }
 
-    .navbar {
-        padding: 12px 20px;
+    .top-bar-left {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-content {
+        padding: 0 20px;
         flex-wrap: wrap;
     }
 
     .nav-toggle {
+        display: block;
+        order: 2;
+        margin-left: auto;
+    }
+
+    .nav-logo {
+        order: 1;
+    }
+
+    .nav-cta {
+        display: none;
+        order: 4;
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        margin-top: 0;
+        padding: 14px 24px;
+    }
+
+    .nav-menu.open ~ .nav-cta {
         display: block;
     }
 
@@ -643,6 +752,7 @@ ul {
         padding-top: 15px;
         position: static;
         transform: none;
+        order: 3;
     }
 
     .nav-menu.open {
@@ -650,7 +760,7 @@ ul {
     }
 
     .nav-menu li {
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
     }
 
     .nav-menu a {
@@ -761,5 +871,12 @@ ul {
 
     .kontakt-info {
         padding: 30px 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 0 20px;
     }
 }
