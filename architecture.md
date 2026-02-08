@@ -51,6 +51,7 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
   - Artikel-CTA (Mail/Telefon/Adresse inkl. Rückruf-Button) via bestehende Klassen in `styles.css`
 - Wichtige Regel:
   - Keine CSS-Masken verwenden; direkte SVG-`background-image`-Einbindung ist robuster über Browser hinweg.
+  - Wenn nur der Hintergrund-Container eines Icons sichtbar ist, aber nicht das Symbol selbst, zuerst prüfen, ob versehentlich wieder Masken (`mask-image`/`-webkit-mask-image`) verwendet wurden.
 
 ## Hero-Glas-CTA (Startseite)
 - Komponente in `index.html` direkt unter `.hero-content`: `.hero-overlay` mit Linkkarte `.hero-glass-card`
@@ -101,6 +102,11 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
 - Responsives Verhalten:
   - Desktop: Text links, Portrait rechts
   - Mobile (`max-width: 768px`): vertikal gestapelt
+- Typografische Leitlinien (Stand jetzt):
+  - Klare Hierarchie mit moderater Gewichtung statt sehr fetter Schrift.
+  - Name (`.article-cta-person-name`) prominent, aber kompakt.
+  - Rolle (`.article-cta-person-role`) kleiner, ruhiger und bewusst dünner gesetzt (`font-weight: 400`).
+  - Kontaktzeilen (`.article-cta-contact-item`, `.article-cta-address`) leicht über Fließtextgröße mit mittlerem Gewicht für bessere Lesbarkeit.
 
 ## Artikelinhalte und Bilder
 - Text- und Bildinhalte wurden für 19 Seiten von `https://www.verlassenschaftsverfahren.at/` titelbasiert zugeordnet.
@@ -121,6 +127,10 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
 - Zentrale Variablen: `--color-primary`, `--color-dark-navy`, `--color-bg-light`, `--color-text` etc.
 - Breakpoint bei `768px`:
   - Navigation wird zu Hamburger-Menü
+  - Offenes Mobile-Menü ist als vollflächiges, frosted/glasiges Overlay gestaltet (`.nav-menu` im Media-Block), mit vertikal zentrierten Linkflächen.
+  - Hamburger-Icon bleibt borderless (ohne Button-Rahmen), Mobile-Linkflächen und Mobile-CTA sind rechteckig (ohne Rundungen).
+  - Mobile-Linkflächen und Mobile-CTA sind visuell um `150px` nach oben versetzt; Border-Effekte an den Linkflächen sind entfernt.
+  - Der mobile CTA-Button wird im offenen Menü ebenfalls zentriert im Overlay positioniert.
   - Grid/Spalten werden gestapelt
 - Bilder auf Artikelseiten verwenden `loading="lazy"` für Performance
 
