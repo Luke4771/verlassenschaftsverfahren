@@ -1222,6 +1222,10 @@ ul {
         right: 20px;
     }
 
+    .nav-toggle.active span {
+        background-color: #fff;
+    }
+
     .nav-toggle span {
         background-color: var(--color-dark-title);
     }
@@ -1263,11 +1267,7 @@ ul {
         justify-content: center;
         align-items: center;
         overflow-y: auto;
-        background:
-            radial-gradient(circle at 20% 12%, rgba(255, 255, 255, 0.58) 0%, rgba(255, 255, 255, 0) 35%),
-            linear-gradient(155deg, rgba(239, 245, 255, 0.74) 0%, rgba(224, 233, 250, 0.68) 100%);
-        backdrop-filter: blur(16px) saturate(1.08);
-        -webkit-backdrop-filter: blur(16px) saturate(1.08);
+        background: var(--color-dark-navy);
         z-index: 150;
     }
 
@@ -1288,16 +1288,16 @@ ul {
         font-weight: 600;
         letter-spacing: 0.2px;
         text-align: center;
-        color: var(--color-dark-title);
+        color: #fff;
         border: none;
         border-radius: 0;
-        background: linear-gradient(145deg, rgba(255, 255, 255, 0.54) 0%, rgba(244, 248, 255, 0.48) 100%);
+        background: rgba(255, 255, 255, 0.08);
     }
 
     .nav-menu a:hover,
     .nav-menu a:focus-visible {
         opacity: 1;
-        background: linear-gradient(145deg, rgba(255, 255, 255, 0.76) 0%, rgba(246, 249, 255, 0.72) 100%);
+        background: rgba(255, 255, 255, 0.14);
     }
 
     .hero {
