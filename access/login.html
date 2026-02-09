@@ -87,22 +87,23 @@
             function getSafeNext() {
                 var params = new URLSearchParams(window.location.search);
                 var next = params.get("next");
+                var fallback = "../index.html";
 
                 if (!next) {
-                    return "/index.html";
+                    return fallback;
                 }
 
                 try {
                     var decoded = decodeURIComponent(next);
                     if (!decoded.startsWith("/")) {
-                        return "/index.html";
+                        return fallback;
                     }
-                    if (decoded.startsWith("/access/login")) {
-                        return "/index.html";
+                    if (decoded.indexOf("/access/login") !== -1) {
+                        return fallback;
                     }
                     return decoded;
                 } catch (e) {
-                    return "/index.html";
+                    return fallback;
                 }
             }
 
