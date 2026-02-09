@@ -738,15 +738,13 @@ ul {
     cursor: pointer;
     align-self: flex-end;
     min-width: 170px;
-    box-shadow: 0 8px 18px rgba(90, 132, 216, 0.24);
-    transition: background-color 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    transition: background-color 0.2s, border-color 0.2s, transform 0.2s;
 }
 
 .kontakt-form button:hover {
     background-color: var(--color-nav-cta-hover);
     border-color: var(--color-nav-cta-hover);
     transform: translateY(-1px);
-    box-shadow: 0 10px 20px rgba(74, 114, 196, 0.28);
 }
 
 /* === Footer === */
@@ -1218,6 +1216,12 @@ ul {
         box-shadow: none;
     }
 
+    .nav-toggle.active {
+        position: fixed;
+        top: 18px;
+        right: 20px;
+    }
+
     .nav-toggle span {
         background-color: var(--color-dark-title);
     }
@@ -1234,7 +1238,6 @@ ul {
         margin: 0;
         padding: 14px 22px;
         border-radius: 0;
-        box-shadow: 0 12px 24px rgba(21, 35, 63, 0.2);
         position: fixed;
         left: 50%;
         top: calc(clamp(61%, 64vh, 70%) - 150px);
@@ -1289,7 +1292,6 @@ ul {
         border: none;
         border-radius: 0;
         background: linear-gradient(145deg, rgba(255, 255, 255, 0.54) 0%, rgba(244, 248, 255, 0.48) 100%);
-        box-shadow: 0 12px 24px rgba(34, 57, 100, 0.09);
     }
 
     .nav-menu a:hover,
@@ -1299,14 +1301,14 @@ ul {
     }
 
     .hero {
-        padding: 30px 16px;
+        padding: 30px 0;
     }
 
     .hero-content {
         flex-direction: column;
         text-align: center;
         padding: 50px 30px 60px;
-        border-radius: 4px;
+        border-radius: 0;
     }
 
     .hero-stat-number {
