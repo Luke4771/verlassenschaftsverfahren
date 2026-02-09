@@ -276,7 +276,7 @@ ul {
         radial-gradient(circle at 75% 30%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
         linear-gradient(135deg, var(--color-hero-dark-1) 0%, var(--color-hero-dark-2) 40%, var(--color-hero-dark-3) 100%);
     border-radius: 0;
-    padding: 55px 60px;
+    padding: 66px 60px;
     display: flex;
     align-items: center;
     gap: 60px;
