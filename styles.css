@@ -36,7 +36,7 @@
 
     /* Layout */
     --max-width: 1200px;
-    --max-width-article: 800px;
+    --max-width-article: 720px;
 }
 
 /* === Reset & Grundlagen === */
@@ -946,21 +946,40 @@ ul {
 .article-toc-list li a {
     display: block;
     padding: 6px 0;
+
     font-size: 0.88rem;
     line-height: 1.4;
     color: var(--color-text-muted);
-    transition: color 0.2s, border-color 0.2s;
+    transition: color 0.2s;
     text-decoration: none;
+    position: relative;
+}
+
+.article-toc-list li a::before {
+    content: '';
+    position: absolute;
+    left: -14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: transparent;
+    transition: background 0.2s;
 }
 
 .article-toc-list li a:hover {
-    color: var(--color-primary);
+    color: var(--color-text);
     text-decoration: none;
 }
 
 .article-toc-list li a.active {
-    color: var(--color-primary);
+    color: var(--color-text);
     font-weight: 600;
+}
+
+.article-toc-list li a.active::before {
+    background: var(--color-primary);
 }
 
 .article-content h2[id] {
