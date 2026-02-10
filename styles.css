@@ -100,7 +100,6 @@ ul {
     text-decoration: none;
 }
 
-.top-bar-left a:hover,
 .top-bar-center a:hover {
     text-decoration: underline;
 }
@@ -835,7 +834,7 @@ ul {
 }
 
 .footer-brand a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .footer-links {
@@ -1166,14 +1165,23 @@ ul {
     background-image: url("images/icons/phone-blue.svg");
 }
 
+.article-cta-contact-item[href^="https://www.cvikl.law"] .article-cta-contact-icon {
+    background-image: url("images/icons/globe-blue.svg");
+}
+
 .article-cta-address {
     display: flex;
     align-items: center;
     gap: 10px;
     color: var(--color-dark-title);
+    text-decoration: none;
     font-size: 1.02rem;
     font-weight: 400;
     line-height: 1.45;
+}
+
+.article-cta-address:hover {
+    text-decoration: underline;
 }
 
 .article-cta-address::before {
@@ -1201,6 +1209,7 @@ ul {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    margin-top: 12px;
 }
 
 .article-cta-button {
