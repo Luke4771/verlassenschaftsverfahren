@@ -712,8 +712,8 @@ ul {
 .kontakt-portrait {
     flex: 0 0 150px;
     width: 150px;
-    -webkit-mask-image: radial-gradient(ellipse 90% 85% at 50% 40%, black 50%, transparent 72%);
-    mask-image: radial-gradient(ellipse 90% 85% at 50% 40%, black 50%, transparent 72%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 35%, black 40%, transparent 80%);
+    mask-image: radial-gradient(ellipse 80% 70% at 50% 35%, black 40%, transparent 80%);
 }
 
 .kontakt-portrait img {
@@ -1364,7 +1364,7 @@ ul {
     }
 
     .hero {
-        padding: 30px 0;
+        padding: 0 0 30px;
     }
 
     .hero-content {
