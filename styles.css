@@ -1307,7 +1307,7 @@ ul {
         border-radius: 0;
         position: fixed;
         left: 50%;
-        top: calc(clamp(61%, 64vh, 70%) - 150px);
+        top: calc(clamp(61%, 64vh, 70%) - 50px);
         transform: translate(-50%, -50%);
         z-index: 161;
     }
