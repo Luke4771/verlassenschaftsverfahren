@@ -320,9 +320,9 @@ ul {
     width: 440px;
     height: 440px;
     background: url('images/dom.webp') no-repeat center top / contain;
-    opacity: 0.25;
     -webkit-mask-image: radial-gradient(ellipse at 50% 40%, black 30%, transparent 70%);
     mask-image: radial-gradient(ellipse at 50% 40%, black 30%, transparent 70%);
+    opacity: 0.25;
     pointer-events: none;
     z-index: 2;
 }
