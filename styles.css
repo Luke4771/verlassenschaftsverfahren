@@ -246,6 +246,92 @@ ul {
     opacity: 1;
 }
 
+/* === Navbar Search === */
+.nav-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nav-search-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    color: var(--color-text-muted);
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+.nav-search-toggle:hover,
+.nav-search.active .nav-search-toggle {
+    color: var(--color-primary);
+}
+
+.nav-search-input {
+    width: 0;
+    padding: 0;
+    border: none;
+    border-bottom: 2px solid transparent;
+    font-size: 0.9rem;
+    font-family: inherit;
+    outline: none;
+    background: transparent;
+    transition: width 0.25s ease, padding 0.25s ease, border-color 0.25s ease;
+}
+
+.nav-search.active .nav-search-input {
+    width: 200px;
+    padding: 6px 8px;
+    border-bottom-color: var(--color-primary);
+}
+
+.nav-search-results {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 340px;
+    max-height: 400px;
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    z-index: 200;
+    margin-top: 8px;
+}
+
+.nav-search-results.visible {
+    display: block;
+}
+
+.nav-search-results a {
+    display: block;
+    padding: 10px 14px;
+    color: var(--color-text);
+    font-size: 0.88rem;
+    line-height: 1.4;
+    border-bottom: 1px solid var(--color-bg-light);
+    transition: background-color 0.15s;
+}
+
+.nav-search-results a:last-child {
+    border-bottom: none;
+}
+
+.nav-search-results a:hover {
+    background-color: var(--color-bg-light);
+    color: var(--color-primary);
+}
+
+.search-no-results {
+    padding: 14px;
+    color: var(--color-text-muted);
+    font-size: 0.88rem;
+    text-align: center;
+}
+
 /* === Hamburger Menu === */
 .nav-toggle {
     display: none;
@@ -656,10 +742,20 @@ ul {
 .faq-list {
     max-width: 800px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .faq-item {
-    border-bottom: 1px solid #e5e5e5;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    transition: border-color 0.2s;
+}
+
+.faq-item.open {
+    border-color: #d0d0d0;
+    background: linear-gradient(135deg, #fbfcff 0%, #f6f8ff 100%);
 }
 
 .faq-question {
@@ -668,7 +764,7 @@ ul {
     align-items: center;
     justify-content: space-between;
     gap: 16px;
-    padding: 20px 0;
+    padding: 20px 24px;
     background: none;
     border: none;
     cursor: pointer;
@@ -678,11 +774,6 @@ ul {
     color: var(--color-text);
     text-align: left;
     line-height: 1.4;
-    transition: color 0.2s;
-}
-
-.faq-question:hover {
-    color: var(--color-primary);
 }
 
 .faq-icon {
@@ -723,11 +814,6 @@ ul {
     opacity: 0;
 }
 
-.faq-question:hover .faq-icon::before,
-.faq-question:hover .faq-icon::after {
-    background-color: var(--color-primary);
-}
-
 .faq-answer {
     max-height: 0;
     overflow: hidden;
@@ -735,10 +821,11 @@ ul {
 }
 
 .faq-answer p {
-    padding: 0 0 20px;
+    padding: 0 24px 24px;
+    margin-right: 120px;
     color: var(--color-text-article);
-    line-height: 1.7;
-    font-size: 0.95rem;
+    line-height: 1.75;
+    font-size: 0.93rem;
 }
 
 .faq-answer a {
@@ -1499,6 +1586,35 @@ ul {
         display: block;
     }
 
+    .nav-search {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .nav-search-toggle {
+        display: none;
+    }
+
+    .nav-search-input {
+        width: 100% !important;
+        padding: 12px 14px !important;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        color: #fff;
+        font-size: 1rem;
+    }
+
+    .nav-search-input::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .nav-search-results {
+        position: static;
+        width: 100%;
+        max-height: 250px;
+        margin-top: 4px;
+    }
+
     .nav-menu {
         display: none;
         flex-direction: column;
@@ -1695,7 +1811,12 @@ ul {
 
     .faq-question {
         font-size: 0.95rem;
-        padding: 16px 0;
+        padding: 16px 20px;
+    }
+
+    .faq-answer p {
+        padding: 0 20px 20px;
+        margin-right: 0;
     }
 
     .themen {
