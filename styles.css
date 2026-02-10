@@ -969,7 +969,7 @@ ul {
 }
 
 .article-toc-list li a:hover {
-    color: var(--color-text-muted);
+    color: #777;
     text-decoration: none;
 }
 
@@ -1341,7 +1341,7 @@ ul {
     .nav-menu li {
         border-top: 0;
         width: min(86vw, 420px);
-        transform: translateY(-150px);
+        transform: translateY(-110px);
     }
 
     .nav-menu a {
