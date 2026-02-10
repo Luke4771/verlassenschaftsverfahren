@@ -140,7 +140,7 @@ ul {
     top: 0;
     z-index: 100;
     padding: 6px 0;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
 }
 
 .navbar-content {
@@ -1105,7 +1105,7 @@ ul {
     grid-area: contact;
     display: grid;
     gap: 8px;
-    margin: 0;
+    margin-top: 6px;
 }
 
 .article-cta-contact-item {
@@ -1115,7 +1115,7 @@ ul {
     color: var(--color-dark-title);
     font-size: 1.02rem;
     line-height: 1.45;
-    font-weight: 580;
+    font-weight: 400;
 }
 
 .article-cta-contact-item span:last-child {
@@ -1152,7 +1152,7 @@ ul {
     gap: 10px;
     color: var(--color-dark-title);
     font-size: 1.02rem;
-    font-weight: 580;
+    font-weight: 400;
     line-height: 1.45;
 }
 
