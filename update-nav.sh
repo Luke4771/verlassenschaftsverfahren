@@ -136,7 +136,12 @@ for filepath in sorted(glob.glob("articles/*.html")):
 print("\nImpressum aktualisieren...")
 imp_topbar = adjust_for_impressum(topbar)
 imp_navbar = adjust_for_impressum(navbar)
-update_file("impressum.html", imp_topbar, imp_navbar, footer)
+imp_footer = adjust_for_impressum(footer)
+update_file("impressum.html", imp_topbar, imp_navbar, imp_footer)
+
+# --- Datenschutz aktualisieren ---
+print("\nDatenschutz aktualisieren...")
+update_file("datenschutz.html", imp_topbar, imp_navbar, imp_footer)
 
 print("\nFertig.")
 PYTHON_SCRIPT

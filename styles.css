@@ -746,7 +746,7 @@ ul {
 .kontakt-form textarea {
     padding: 12px 14px;
     border: 1px solid var(--color-border-secondary);
-    border-radius: 6px;
+    border-radius: 0;
     font-size: 0.95rem;
     font-family: inherit;
     background-color: #fff;
@@ -767,6 +767,7 @@ ul {
 }
 
 .kontakt-form button {
+    align-self: flex-start;
     background-color: var(--color-nav-cta);
     color: #fff;
     border: 1px solid var(--color-nav-cta);
@@ -776,7 +777,6 @@ ul {
     letter-spacing: 0.01em;
     border-radius: 0;
     cursor: pointer;
-    align-self: flex-end;
     min-width: 170px;
     transition: background-color 0.2s, border-color 0.2s, transform 0.2s;
 }
@@ -797,7 +797,7 @@ ul {
 }
 
 .footer-content {
-    max-width: var(--max-width);
+    max-width: calc(var(--max-width) - 80px);
     margin: 0 auto;
     padding: 0 40px;
     display: flex;
