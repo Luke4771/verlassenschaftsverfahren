@@ -520,14 +520,14 @@ ul {
 /* === Wichtige Themen Section === */
 .themen {
     background-color: var(--color-bg-light);
-    padding: 40px 40px 80px;
+    padding: 48px 40px 80px;
 }
 
 .themen h2 {
     text-align: center;
     font-size: 2rem;
-    font-weight: 300;
-    letter-spacing: 2px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     margin-bottom: 15px;
     color: var(--color-text);
@@ -536,10 +536,20 @@ ul {
 .themen h2::after {
     content: "";
     display: block;
-    width: 60px;
+    width: 90px;
     height: 2px;
     background-color: var(--color-primary);
-    margin: 15px auto 50px;
+    margin: 12px auto 20px;
+}
+
+.themen-subtitle {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 0.88rem;
+    font-weight: 300;
+    letter-spacing: 0.03em;
+    margin-top: 0;
+    margin-bottom: 100px;
 }
 
 .themen-grid {
@@ -547,6 +557,7 @@ ul {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
     gap: 30px;
 }
 
@@ -554,7 +565,7 @@ ul {
     background-color: var(--color-primary);
     padding: 35px 30px;
     border-radius: 0;
-    min-height: 280px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
 .themen-box h3 {
