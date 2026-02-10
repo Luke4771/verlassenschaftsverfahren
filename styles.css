@@ -536,7 +536,7 @@ ul {
 .themen h2::after {
     content: "";
     display: block;
-    width: 90px;
+    width: 120px;
     height: 2px;
     background-color: var(--color-primary);
     margin: 12px auto 20px;
