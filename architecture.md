@@ -35,11 +35,11 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
 ## Seitenaufbau (Startseite)
 1. Top-Bar (`.top-bar`) mit Kontaktinfos
 2. Navbar (`.navbar`) mit Logo-Block (`CVIKL`, `RECHTSANWALT`, `Verlassenschaftsverfahren.at`), Links, Mobile-Toggle
-3. Hero (`.hero`) mit Intro-Text und Bild
-4. Ablauf (`.ablauf`) als Stepper-Übersicht (5 Schritte) + Link zum Detailartikel
-5. Themenübersicht (`.themen`) als 2x2-Grid mit Artikellinks
+3. Hero (`.hero`) mit Intro-Text und dekorativem Hintergrund
+4. Ablauf (`.process`) als Stepper-Übersicht (5 Schritte) + Link zum Detailartikel
+5. Themenübersicht (`.topics`) als 2x2-Grid mit Artikellinks
 6. FAQ (`.faq`) als Akkordeon-Liste (Fragen als Buttons, Antworten ein-/ausklappbar)
-7. Kontakt (`.kontakt`) mit Karte links (`.kontakt-map`) und rechtem Kontakt-Panel (`.kontakt-info > .kontakt-panel`) inkl. strukturierter Kontaktdaten (`dl.kontakt-meta`) + Formular
+7. Kontakt (`.contact`) mit Karte links (`.contact-map`) und rechtem Kontakt-Panel (`.contact-info > .contact-panel`) inkl. strukturierter Kontaktdaten (`dl.contact-meta`) + Formular
 8. Footer (`.footer`)
 
 ### Icon-Assets (Top-Bar und CTA)
@@ -59,20 +59,20 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
   - Wenn nur der Hintergrund-Container eines Icons sichtbar ist, aber nicht das Symbol selbst, zuerst prüfen, ob versehentlich wieder Masken (`mask-image`/`-webkit-mask-image`) verwendet wurden.
 
 ## Ablauf-Section (Startseite)
-- Komponente in `index.html`: `<section class="ablauf" id="ablauf">`
+- Komponente in `index.html`: `<section class="process" id="ablauf">`
 - Zweck: den typischen Standardablauf kurz vermitteln und als Einstieg in den Detailartikel dienen
 - Struktur:
   - Überschrift + Unterzeile
-  - `<ol class="ablauf-steps">` mit 5 Schritten
+  - `<ol class="process-steps">` mit 5 Schritten
   - Footer mit Hinweistext + CTA-Link zum Artikel `articles/ablauf-verlassenschaftsverfahren.html`
 - Kein JavaScript (reines HTML/CSS)
 
 ## Kontaktsektion (Startseite)
 - Desktop-Layout bleibt zweispaltig: Google-Map links, Kontaktbereich rechts.
-- Der rechte Bereich ist als Card aufgebaut (`.kontakt-panel`) und enthält:
+- Der rechte Bereich ist als Card aufgebaut (`.contact-panel`) und enthält:
   - Überschrift (`h2`)
-  - Strukturierte Kontaktdaten als Definitionsliste (`dl.kontakt-meta` mit `.kontakt-meta-row`, `dt`, `dd`)
-  - Kontaktformular (`.kontakt-form`)
+  - Strukturierte Kontaktdaten als Definitionsliste (`dl.contact-meta` mit `.contact-meta-row`, `dt`, `dd`)
+  - Kontaktformular (`.contact-form`)
 - Formularverhalten unverändert: Platzhalter-Submit über `onsubmit="return false;"` (kein Backend-Post).
 
 ## FAQ-Sektion (Startseite)
@@ -112,7 +112,6 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
   - `.article-cta-image`
 - Linkziele der CTA-Buttons:
   - Primärbutton: `../index.html#kontakt`
-  - Sekundärbutton: `tel:+4312908353`
 - Responsives Verhalten:
   - Desktop: Text links, Portrait rechts
   - Mobile (`max-width: 768px`): vertikal gestapelt
@@ -141,6 +140,8 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
 ## Styling und Responsivität
 - Alle Farben und Layout-Werte als CSS Custom Properties in `:root` (Beginn von `styles.css`)
 - Zentrale Variablen: `--color-primary`, `--color-dark-navy`, `--color-bg-light`, `--color-text` etc.
+- CSS-Klassennamen sind auf Englisch zu halten (z. B. `.process`, `.topics`, `.contact`, `.glossary-*`).
+- Wiederverwendete Überschriften-/Beschreibungstypografie für Startseiten-Sektionen (`.process`, `.topics`, `.faq`) wird über gruppierte CSS-Selektoren zentral gepflegt.
 - Breakpoint bei `768px`:
   - Navigation wird zu Hamburger-Menü
   - Offenes Mobile-Menü ist als vollflächiges, frosted/glasiges Overlay gestaltet (`.nav-menu` im Media-Block), mit vertikal zentrierten Linkflächen.
@@ -179,7 +180,7 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
 - Alphabet-Navigation (A-Z Kacheln, nur Buchstaben mit Einträgen)
 - Inline-Filterfeld zum Durchsuchen der Begriffe (Vanilla JS, ~20 Zeilen am Seitenende)
 - Begriffe sind als reine Definitionen ohne zusätzliche "Mehr erfahren"-Links dargestellt
-- CSS-Klassen: `.glossar`, `.glossar-content`, `.glossar-filter-input`, `.glossar-alphabet`, `.glossar-letter`, `.glossar-term`
+- CSS-Klassen: `.glossary`, `.glossary-content`, `.glossary-filter-input`, `.glossary-alphabet`, `.glossary-letter`, `.glossary-term`
 - `update-nav.sh` synchronisiert Top-Bar/Navbar/Footer wie bei anderen Root-Seiten
 
 ## Suchfunktion (js/search.js)

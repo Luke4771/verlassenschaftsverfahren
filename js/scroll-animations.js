@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }, { threshold: 0.15 });
 
-    document.querySelectorAll(".fade-in-up, .slide-in-left, .slide-in-right").forEach(function (el) {
+    document.querySelectorAll(".fade-in-up").forEach(function (el) {
         observer.observe(el);
     });
 });
