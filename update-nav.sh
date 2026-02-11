@@ -71,7 +71,7 @@ def adjust_for_articles(block):
     block = block.replace('href="index.html', 'href="../index.html')
     block = block.replace('href="impressum.html', 'href="../impressum.html')
     block = block.replace('href="datenschutz.html', 'href="../datenschutz.html')
-    block = block.replace('href="glossar.html', 'href="../glossar.html')
+    block = block.replace('href="glossary.html', 'href="../glossary.html')
     block = block.replace('src="images/', 'src="../images/')
     block = block.replace('src="js/', 'src="../js/')
     return block
@@ -147,7 +147,7 @@ update_file("datenschutz.html", imp_topbar, imp_navbar, imp_footer)
 
 # --- Glossar aktualisieren ---
 print("\nGlossar aktualisieren...")
-update_file("glossar.html", imp_topbar, imp_navbar, imp_footer)
+update_file("glossary.html", imp_topbar, imp_navbar, imp_footer)
 
 print("\nFertig.")
 PYTHON_SCRIPT

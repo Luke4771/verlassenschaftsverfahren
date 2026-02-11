@@ -10,7 +10,7 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
 ├── index.html                  — Startseite
 ├── impressum.html              — Impressum
 ├── datenschutz.html            — Datenschutzerklärung
-├── glossar.html                — Glossar (Begriffsdefinitionen Erbrecht)
+├── glossary.html                — Glossar (Begriffsdefinitionen Erbrecht)
 ├── styles.css                  — Zentrale Styles (CSS Custom Properties in :root)
 ├── js/
 │   ├── nav-toggle.js           — Hamburger-Menü Script (shared)
@@ -159,7 +159,7 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
   - `index.html`
   - `impressum.html`
   - `datenschutz.html`
-  - `glossar.html`
+  - `glossary.html`
   - alle `articles/*.html`
 - Mechanik:
   - Bei korrektem Passwort setzt die Login-Seite `sessionStorage["site_access_granted"] = "1"`.
@@ -170,14 +170,15 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
 - Hinweis:
   - Dies ist bewusst ein einfacher Schutz zur Zugriffsbeschränkung, aber kein vollständiger Perimeter-Schutz wie Cloudflare Access oder Netlify Password Protection (Paid).
 
-## Glossar-Seite (glossar.html)
+## Glossar-Seite (glossary.html)
 - Root-Level-Seite wie impressum.html und datenschutz.html
 - Aufbau: Top-Bar, Navbar, Glossar-Hauptinhalt, Footer
+- Headerbereich als zentrierter Glossar-Hero mit großer, heller Hintergrundschrift, Titel, Introtext, Suchhinweis, Suchfeld mit Lupe und "Häufig gesucht"-Chips
 - Alphabetische Auflistung von ~21 erbrechtlichen Fachbegriffen mit Definitionen
-- Jeder Begriff hat eine Anchor-ID für Deep-Linking aus Suchergebnissen (z.B. `glossar.html#pflichtteil`)
+- Jeder Begriff hat eine Anchor-ID für Deep-Linking aus Suchergebnissen (z.B. `glossary.html#pflichtteil`)
 - Alphabet-Navigation (A-Z Kacheln, nur Buchstaben mit Einträgen)
 - Inline-Filterfeld zum Durchsuchen der Begriffe (Vanilla JS, ~20 Zeilen am Seitenende)
-- Begriffe verlinken optional auf den passenden Detailartikel ("Mehr erfahren")
+- Begriffe sind als reine Definitionen ohne zusätzliche "Mehr erfahren"-Links dargestellt
 - CSS-Klassen: `.glossar`, `.glossar-content`, `.glossar-filter-input`, `.glossar-alphabet`, `.glossar-letter`, `.glossar-term`
 - `update-nav.sh` synchronisiert Top-Bar/Navbar/Footer wie bei anderen Root-Seiten
 
@@ -186,7 +187,7 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
 - Kategorien: `artikel` (Artikel + FAQ) und `glossar` (Glossar-Begriffe)
 - Suchergebnisse werden nach Kategorie gruppiert mit Überschriften ("Artikel", "Glossar")
 - Max. 8 Ergebnisse gesamt
-- Glossar-Einträge verlinken auf `glossar.html#anchor-id`
+- Glossar-Einträge verlinken auf `glossary.html#anchor-id`
 - CSS-Klasse für Kategorie-Überschriften: `.search-category-heading`
 
 ## Wartung
