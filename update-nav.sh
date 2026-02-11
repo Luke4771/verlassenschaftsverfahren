@@ -71,6 +71,7 @@ def adjust_for_articles(block):
     block = block.replace('href="index.html', 'href="../index.html')
     block = block.replace('href="impressum.html', 'href="../impressum.html')
     block = block.replace('href="datenschutz.html', 'href="../datenschutz.html')
+    block = block.replace('href="glossar.html', 'href="../glossar.html')
     block = block.replace('src="images/', 'src="../images/')
     block = block.replace('src="js/', 'src="../js/')
     return block
@@ -81,6 +82,7 @@ def adjust_for_impressum(block):
     block = strip_home_id(block)
     block = block.replace('href="#home', 'href="index.html#home')
     block = block.replace('href="#wichtige-themen', 'href="index.html#wichtige-themen')
+    block = block.replace('href="#faq', 'href="index.html#faq')
     block = block.replace('href="#kontakt', 'href="index.html#kontakt')
     return block
 
@@ -142,6 +144,10 @@ update_file("impressum.html", imp_topbar, imp_navbar, imp_footer)
 # --- Datenschutz aktualisieren ---
 print("\nDatenschutz aktualisieren...")
 update_file("datenschutz.html", imp_topbar, imp_navbar, imp_footer)
+
+# --- Glossar aktualisieren ---
+print("\nGlossar aktualisieren...")
+update_file("glossar.html", imp_topbar, imp_navbar, imp_footer)
 
 print("\nFertig.")
 PYTHON_SCRIPT

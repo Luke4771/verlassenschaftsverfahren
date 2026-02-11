@@ -331,6 +331,18 @@ ul {
     text-align: center;
 }
 
+.search-category-heading {
+    display: block;
+    padding: 8px 14px 4px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-text-muted);
+    background: var(--color-bg-light);
+    border-bottom: 1px solid var(--color-border-secondary);
+}
+
 /* === Hamburger Menu === */
 .nav-toggle {
     display: none;
@@ -623,6 +635,28 @@ ul {
     max-width: none;
 }
 
+/* === Dekorative Sektionsnummern === */
+[data-number] {
+    position: relative;
+}
+
+[data-number]::before {
+    content: attr(data-number);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 10rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    color: #e8e8e8;
+}
+
+.themen [data-number]::before {
+    color: #fff;
+}
+
 /* === Ablauf Section === */
 .ablauf {
     background-color: #fff;
@@ -669,7 +703,7 @@ ul {
     font-weight: 300;
     letter-spacing: 0.01em;
     line-height: 1.8;
-    text-align: left;
+    text-align: center;
 }
 
 .ablauf-content {
@@ -842,7 +876,7 @@ ul {
 
 /* === Wichtige Themen Section === */
 .themen {
-    background-color: #fff;
+    background-color: var(--color-bg-light);
     padding: 48px 40px 80px;
     scroll-margin-top: 60px;
 }
@@ -880,7 +914,7 @@ ul {
     font-weight: 300;
     letter-spacing: 0.01em;
     line-height: 1.8;
-    text-align: left;
+    text-align: center;
 }
 
 .themen-grid {
@@ -1077,7 +1111,7 @@ ul {
 
 /* === Kontakt Section === */
 .kontakt {
-    background-color: #fff;
+    background-color: var(--color-bg-light);
     padding: 0;
 }
 
@@ -1391,6 +1425,136 @@ ul {
 .article-placeholder {
     color: #888;
     font-style: italic;
+}
+
+/* === Glossar-Seite === */
+.glossar {
+    min-height: calc(100vh - 300px);
+    padding: 60px 40px;
+    background-color: #fff;
+}
+
+.glossar-content {
+    max-width: var(--max-width-article);
+    margin: 0 auto;
+}
+
+.glossar-content h1 {
+    font-size: 2rem;
+    color: var(--color-text);
+    font-weight: 700;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--color-primary);
+    margin-bottom: 20px;
+}
+
+.glossar-intro {
+    color: var(--color-text-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.glossar-filter {
+    margin-bottom: 24px;
+}
+
+.glossar-filter-input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--color-border-secondary);
+    border-radius: 0;
+    font-size: 0.95rem;
+    font-family: inherit;
+    background-color: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.glossar-filter-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(90, 132, 216, 0.18);
+}
+
+.glossar-alphabet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 36px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--color-bg-light);
+}
+
+.glossar-alphabet a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    border: 1px solid var(--color-border-secondary);
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.glossar-alphabet a:hover {
+    background-color: var(--color-primary);
+    color: #fff;
+    border-color: var(--color-primary);
+}
+
+.glossar-letter {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-top: 40px;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--color-bg-light);
+    scroll-margin-top: 100px;
+}
+
+.glossar-list > .glossar-letter:first-child {
+    margin-top: 0;
+}
+
+.glossar-term {
+    padding: 16px 0 16px 18px;
+    margin-bottom: 8px;
+    border-left: 3px solid var(--color-primary);
+    scroll-margin-top: 100px;
+}
+
+.glossar-term-title {
+    font-size: 1.1rem;
+    font-weight: 650;
+    color: var(--color-dark-title);
+    margin-bottom: 6px;
+}
+
+.glossar-term-definition {
+    color: var(--color-text-article);
+    font-size: 0.95rem;
+    line-height: 1.75;
+    margin-bottom: 8px;
+}
+
+.glossar-term-link {
+    color: var(--color-primary);
+    font-size: 0.88rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.glossar-term-link:hover {
+    text-decoration: underline;
+}
+
+.glossar-term.hidden,
+.glossar-letter.hidden {
+    display: none;
 }
 
 /* === Artikel-TOC (Sticky Sidebar) === */
@@ -1935,6 +2099,20 @@ ul {
 
     .article-content h1 {
         font-size: 1.7rem;
+    }
+
+    .glossar {
+        padding: 40px 16px;
+    }
+
+    .glossar-content h1 {
+        font-size: 1.7rem;
+    }
+
+    .glossar-alphabet a {
+        width: 32px;
+        height: 32px;
+        font-size: 0.82rem;
     }
 
     .article-cta-content {
