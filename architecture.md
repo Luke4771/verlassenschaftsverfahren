@@ -42,6 +42,12 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
 7. Kontakt (`.contact`) mit Karte links (`.contact-map`) und rechtem Kontakt-Panel (`.contact-info > .contact-panel`) inkl. strukturierter Kontaktdaten (`dl.contact-meta`) + Formular
 8. Footer (`.footer`)
 
+### Navbar (Mobile Overlay)
+- Breakpoint: `@media (max-width: 768px)`
+- Das Menü (`.nav-menu`) öffnet als Fullscreen-Overlay.
+- Der CTA (`.nav-cta`) wird im geöffneten Mobile-Menü fix am unteren Viewportrand positioniert (`bottom` + `safe-area-inset-bottom`), damit er nicht zu weit oben in der Menüfläche sitzt.
+- Die Suchergebnisse (`.nav-search-results a`) erhalten im Mobile-Overlay eigene Link-Styles (dunkler Text auf hellem Hintergrund), damit sie nicht von den allgemeinen Menü-Link-Styles überschrieben werden.
+
 ### Icon-Assets (Top-Bar und CTA)
 - Quelle: Heroicons (Outline) als lokale SVG-Dateien in `images/icons/`.
 - Verwendete Dateien:
@@ -150,6 +156,22 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
   - Der mobile CTA-Button wird im offenen Menü ebenfalls zentriert im Overlay positioniert.
   - Grid/Spalten werden gestapelt
 - Bilder auf Artikelseiten verwenden `loading="lazy"` für Performance
+
+## Subtile UI-Nuancen (Pills & Divider)
+- Zusätzliche, dezente UI-Tokens in `:root` von `styles.css`:
+  - `--color-pill-bg`
+  - `--color-pill-border`
+  - `--color-pill-text`
+- Wiederverwendbare Kicker-Pill:
+  - Klasse: `.section-kicker`
+  - Einsatz als kurze Sektionseinleitung in Startseite (`.process-header`, `.topics-header`, `.faq-aside`) und Glossar-Header (`.glossary-hero`)
+  - Farbgebung bewusst neutral (`grau/weiß`) statt Akzentblau
+- Divider-System:
+  - Unterstreichungen bei Sektionstiteln (`.process`, `.topics`, `.faq`, `.contact`) bleiben im ursprünglichen Stil (solide blaue Linien).
+- Listen-Nuancen:
+  - FAQ-Linien sind harmonisiert über einen etwas weicheren Trennlinienkontrast.
+- Formensprache:
+  - Global bleibt die überwiegend eckige Designsprache bestehen; Rundungen (`999px`) werden bewusst nur bei Pill-Elementen eingesetzt.
 
 ## Zugangsschutz (einfach, clientseitig)
 - Für Netlify Free ist ein einfacher Passwort-Schutz direkt im Frontend umgesetzt.
