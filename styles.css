@@ -364,7 +364,7 @@ ul {
 
 /* === Hero Section === */
 .hero {
-    background: linear-gradient(to bottom, #ffffff, var(--color-bg-light));
+    background: #fff;
     padding: 50px 40px;
     position: relative;
 }
@@ -623,9 +623,225 @@ ul {
     max-width: none;
 }
 
+/* === Ablauf Section === */
+.ablauf {
+    background-color: #fff;
+    padding: 48px 40px 72px;
+    position: relative;
+    scroll-margin-top: 60px;
+}
+
+.ablauf-inner {
+    max-width: calc(var(--max-width) - 80px);
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.ablauf-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.ablauf-header h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    color: var(--color-text);
+}
+
+.ablauf-header h2::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 3px;
+    background-color: var(--color-primary);
+    margin: 12px auto 0;
+}
+
+.ablauf-description {
+    margin: 20px auto 0;
+    max-width: 720px;
+    color: var(--color-text-muted);
+    font-size: 1.02rem;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+    line-height: 1.8;
+}
+
+.ablauf-content {
+    display: flex;
+    max-width: 920px;
+    margin: 0 auto;
+    gap: 28px;
+    align-items: stretch;
+}
+
+.ablauf-steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+    display: grid;
+    gap: 16px;
+}
+
+.ablauf-timeline {
+    position: relative;
+    width: 2px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ablauf-timeline-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(90, 132, 216, 0.28);
+}
+
+.ablauf-timeline-line::before,
+.ablauf-timeline-line::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-primary);
+}
+
+.ablauf-timeline-line::before {
+    top: 0;
+}
+
+.ablauf-timeline-line::after {
+    bottom: 0;
+}
+
+.ablauf-timeline-label {
+    position: relative;
+    writing-mode: vertical-rl;
+    white-space: nowrap;
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    color: var(--color-text-muted);
+    background: #fff;
+    padding: 8px 0;
+}
+
+.ablauf-step {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr);
+    gap: 16px;
+    align-items: start;
+}
+
+.ablauf-rail {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.ablauf-step-number {
+    width: 32px;
+    height: 32px;
+    border-radius: 0;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-nav-cta-hover) 100%);
+}
+
+.ablauf-card {
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(31, 45, 72, 0.10);
+    box-shadow: 0 10px 26px rgba(18, 37, 79, 0.06);
+    padding: 16px 18px;
+    border-left: 4px solid var(--color-primary);
+}
+
+.ablauf-card h3 {
+    margin: 0 0 6px;
+    font-size: 1.05rem;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+    color: var(--color-dark-title);
+}
+
+.ablauf-card p {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.ablauf-card-final {
+    background: linear-gradient(135deg, rgba(90, 132, 216, 0.10) 0%, rgba(123, 163, 240, 0.12) 100%), rgba(255, 255, 255, 0.92);
+    border-color: rgba(90, 132, 216, 0.22);
+}
+
+.ablauf-footer {
+    max-width: 920px;
+    margin: 22px auto 0;
+    display: block;
+    padding-left: 60px;
+}
+
+.ablauf-note {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 0.88rem;
+    font-weight: 300;
+    line-height: 1.7;
+    position: relative;
+    padding-left: 22px;
+}
+
+.ablauf-note::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.2em;
+    width: 16px;
+    height: 16px;
+    background-image: url("images/icons/information-circle.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.72;
+}
+
+.ablauf-note a {
+    color: var(--color-dark-title);
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: rgba(90, 132, 216, 0.55);
+    text-underline-offset: 3px;
+}
+
+.ablauf-note a:hover {
+    text-decoration-color: rgba(90, 132, 216, 0.9);
+}
+
+.ablauf-note a:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
 /* === Wichtige Themen Section === */
 .themen {
-    background-color: var(--color-bg-light);
+    background-color: #fff;
     padding: 48px 40px 80px;
     scroll-margin-top: 60px;
 }
@@ -719,8 +935,8 @@ ul {
     scroll-margin-top: 60px;
 }
 
-.faq h2 {
-    text-align: center;
+.faq-aside h2 {
+    text-align: left;
     font-size: 2rem;
     font-weight: 400;
     letter-spacing: 0.08em;
@@ -729,27 +945,42 @@ ul {
     color: var(--color-text);
 }
 
-.faq h2::after {
+.faq-aside h2::after {
     content: "";
     display: block;
     width: 120px;
     height: 3px;
     background-color: var(--color-primary);
-    margin: 12px auto 60px;
+    margin: 12px 0 22px;
 }
 
 .faq-grid {
     max-width: 1100px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0 50px;
+    grid-template-columns: minmax(260px, 360px) minmax(0, 1fr);
+    gap: 0 70px;
     align-items: start;
+}
+
+.faq-aside {
+    padding-top: 6px;
+}
+
+.faq-subtitle {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.7;
 }
 
 .faq-list {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: none;
+    padding-left: 96px;
 }
 
 .faq-item {
@@ -768,6 +999,7 @@ ul {
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     gap: 20px;
     padding: 28px 8px;
     background: none;
@@ -819,10 +1051,11 @@ ul {
 
 .faq-answer p {
     padding: 0 8px 24px 42px;
-    margin-right: 80px;
+    margin: 0;
     color: var(--color-text-article);
     line-height: 1.75;
     font-size: 0.93rem;
+    text-align: left;
 }
 
 .faq-answer a {
@@ -836,6 +1069,7 @@ ul {
 
 /* === Kontakt Section === */
 .kontakt {
+    background-color: #fff;
     padding: 0;
 }
 
@@ -1802,8 +2036,62 @@ ul {
         max-width: none;
     }
 
+    .ablauf {
+        padding: 40px 20px 60px;
+    }
+
+    .ablauf-header {
+        margin-bottom: 36px;
+    }
+
+    .ablauf-header h2 {
+        font-size: 1.55rem;
+    }
+
+    .ablauf-description {
+        margin-top: 14px;
+        font-size: 0.95rem;
+    }
+
+    .ablauf-timeline {
+        display: none;
+    }
+
+    .ablauf-step {
+        grid-template-columns: 38px minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .ablauf-step-number {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9rem;
+    }
+
+    .ablauf-card {
+        padding: 14px 14px;
+    }
+
+    .ablauf-card h3 {
+        font-size: 1rem;
+    }
+
+    .ablauf-card p {
+        font-size: 0.94rem;
+    }
+
+    .ablauf-footer {
+        margin-top: 18px;
+        padding-left: 50px;
+    }
+
     .faq {
         padding: 40px 20px 60px;
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 
     .faq-question {
@@ -1811,12 +2099,12 @@ ul {
         padding: 20px 8px;
     }
 
-    .faq-answer p {
-        padding: 0 8px 20px 42px;
+    .faq-list {
+        padding-left: 0;
     }
 
-    .faq-grid {
-        grid-template-columns: 1fr;
+    .faq-answer p {
+        padding: 0 8px 20px 42px;
     }
 
     .themen {

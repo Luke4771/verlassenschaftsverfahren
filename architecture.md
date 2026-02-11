@@ -12,7 +12,10 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
 ├── datenschutz.html            — Datenschutzerklärung
 ├── styles.css                  — Zentrale Styles (CSS Custom Properties in :root)
 ├── js/
-│   └── nav-toggle.js           — Hamburger-Menü Script (shared)
+│   ├── nav-toggle.js           — Hamburger-Menü Script (shared)
+│   ├── faq-toggle.js           — FAQ-Akkordeon (Toggle open/close)
+│   ├── scroll-animations.js    — Scroll-basierte Fade-in Animationen
+│   └── search.js               — Client-side Suche (Artikel + FAQ-Anker)
 ├── articles/                   — 23 Artikel-Unterseiten
 ├── images/
 │   ├── logo.png
@@ -32,10 +35,11 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
 1. Top-Bar (`.top-bar`) mit Kontaktinfos
 2. Navbar (`.navbar`) mit Logo-Block (`CVIKL`, `RECHTSANWALT`, `Verlassenschaftsverfahren.at`), Links, Mobile-Toggle
 3. Hero (`.hero`) mit Intro-Text und Bild
-4. Überlappende Hero-Glas-CTA (`.hero-overlay` > `.hero-glass-card`) links unter dem Hero-Bereich, mit visueller Überlagerung in die Themen-Sektion
+4. Ablauf (`.ablauf`) als Stepper-Übersicht (5 Schritte) + Link zum Detailartikel
 5. Themenübersicht (`.themen`) als 2x2-Grid mit Artikellinks
-6. Kontakt (`.kontakt`) mit Karte links (`.kontakt-map`) und rechtem Kontakt-Panel (`.kontakt-info > .kontakt-panel`) inkl. strukturierter Kontaktdaten (`dl.kontakt-meta`) + Formular
-7. Footer (`.footer`)
+6. FAQ (`.faq`) als Akkordeon-Liste (Fragen als Buttons, Antworten ein-/ausklappbar)
+7. Kontakt (`.kontakt`) mit Karte links (`.kontakt-map`) und rechtem Kontakt-Panel (`.kontakt-info > .kontakt-panel`) inkl. strukturierter Kontaktdaten (`dl.kontakt-meta`) + Formular
+8. Footer (`.footer`)
 
 ### Icon-Assets (Top-Bar und CTA)
 - Quelle: Heroicons (Outline) als lokale SVG-Dateien in `images/icons/`.
@@ -53,11 +57,14 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
   - Keine CSS-Masken verwenden; direkte SVG-`background-image`-Einbindung ist robuster über Browser hinweg.
   - Wenn nur der Hintergrund-Container eines Icons sichtbar ist, aber nicht das Symbol selbst, zuerst prüfen, ob versehentlich wieder Masken (`mask-image`/`-webkit-mask-image`) verwendet wurden.
 
-## Hero-Glas-CTA (Startseite)
-- Komponente in `index.html` direkt unter `.hero-content`: `.hero-overlay` mit Linkkarte `.hero-glass-card`
-- Zweck: prominenter, klickbarer Einstieg zur Kontaktsektion (`href="#kontakt"`)
-- Design: transluzenter/glossy Card-Look (Gradient + `backdrop-filter` + weiche Schatten) mit klarer Typografie ohne Icon
-- Layout: Desktop überlappt die Grenze zwischen Hero und Themenbereich; mobil wird die Komponente normal im Fluss ohne Überlagerung dargestellt
+## Ablauf-Section (Startseite)
+- Komponente in `index.html`: `<section class="ablauf" id="ablauf">`
+- Zweck: den typischen Standardablauf kurz vermitteln und als Einstieg in den Detailartikel dienen
+- Struktur:
+  - Überschrift + Unterzeile
+  - `<ol class="ablauf-steps">` mit 5 Schritten
+  - Footer mit Hinweistext + CTA-Link zum Artikel `articles/ablauf-verlassenschaftsverfahren.html`
+- Kein JavaScript (reines HTML/CSS)
 
 ## Kontaktsektion (Startseite)
 - Desktop-Layout bleibt zweispaltig: Google-Map links, Kontaktbereich rechts.
@@ -66,6 +73,12 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
   - Strukturierte Kontaktdaten als Definitionsliste (`dl.kontakt-meta` mit `.kontakt-meta-row`, `dt`, `dd`)
   - Kontaktformular (`.kontakt-form`)
 - Formularverhalten unverändert: Platzhalter-Submit über `onsubmit="return false;"` (kein Backend-Post).
+
+## FAQ-Sektion (Startseite)
+- Markup: `.faq` mit `.faq-item`-Blöcken; Frage ist ein `<button class="faq-question">`, Antwort liegt in `.faq-answer`.
+- Verhalten: `js/faq-toggle.js` toggelt pro Item die Klasse `open` und setzt `aria-expanded` passend.
+- Inhalt: Antworten sind als abgeschlossene Texte formuliert (ohne Links in den Antworten).
+- Layout: zweispaltig: links Intro (`.faq-aside`) mit Überschrift + kurzem Text, rechts die Fragenliste (`.faq-list`) als Akkordeon; mobil gestapelt.
 
 ## Artikelaufbau (articles/*.html)
 - Gemeinsamer Header/Footer wie Startseite

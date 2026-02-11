@@ -30,8 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
         { t: 'Wer erbt, wenn kein Testament vorhanden ist?', u: 'index.html#faq' },
         { t: 'Kann ich eine Erbschaft ausschlagen?', u: 'index.html#faq' },
         { t: 'Was kostet ein Verlassenschaftsverfahren?', u: 'index.html#faq' },
-        { t: 'Was ist der Pflichtteil?', u: 'index.html#faq' },
-        { t: 'Was passiert mit dem Bankkonto des Verstorbenen?', u: 'index.html#faq' },
         { t: 'Brauche ich einen Rechtsanwalt im Verlassenschaftsverfahren?', u: 'index.html#faq' }
     ];
 

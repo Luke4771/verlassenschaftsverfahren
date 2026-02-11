@@ -35,7 +35,7 @@ A static informational website about Austrian inheritance law (Erbrecht), operat
 
 ## Page Architecture (index.html)
 1. **Top Bar** (`.top-bar`) — blue bar with three-column layout: name left (`.top-bar-left`), phone/email center (`.top-bar-center`), address right (`.top-bar-right`)
-2. **Navbar** (`.navbar` > `.navbar-content`) — sticky, logo + text left (`.nav-logo` with `.nav-logo-text`), 2 centered links (Home, Themenübersicht), CTA button right (`.nav-cta` "Beratungstermin"), hamburger on mobile
+2. **Navbar** (`.navbar` > `.navbar-content`) — sticky, logo + text left (`.nav-logo` with `.nav-logo-text`), 2 centered links (Start, Themenübersicht), CTA button right (`.nav-cta` "Beratungstermin"), hamburger on mobile
 3. **Hero** (`.hero`) — title + tagline left, image right; stacks vertically on mobile
 4. **Themenübersicht** (`.themen`) — 2x2 grid of topic boxes, each containing article links
 5. **Kontakt** (`.kontakt`) — Google Maps embed + contact form side by side
