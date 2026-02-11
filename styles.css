@@ -653,8 +653,21 @@ ul {
     color: #e8e8e8;
 }
 
-.themen [data-number]::before {
-    color: #fff;
+.section-header {
+    position: relative;
+}
+
+.section-header::before {
+    z-index: 0;
+    left: -9rem;
+    font-size: 14.4rem;
+    color: rgba(0, 0, 0, 0.025);
+}
+
+.section-header > h2,
+.section-header > p {
+    position: relative;
+    z-index: 1;
 }
 
 /* === Ablauf Section === */
