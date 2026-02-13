@@ -1331,8 +1331,21 @@ ul {
 
 .glossary-hero {
     text-align: center;
-    padding: 18px 0 8px;
+    padding: 32px 0 20px;
     margin-bottom: 34px;
+    background: radial-gradient(ellipse at 50% 40%, rgba(90, 132, 216, 0.04) 0%, transparent 70%);
+    position: relative;
+    isolation: isolate;
+}
+
+.glossary-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    filter: url(#grain-filter);
+    opacity: 0.12;
 }
 
 .glossary-hero .section-kicker {
@@ -1340,43 +1353,14 @@ ul {
     z-index: 1;
 }
 
-.glossary-hero-heading {
-    position: relative;
-    overflow: hidden;
-    isolation: isolate;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    height: 152px;
-    margin: 0 auto 10px;
-}
-
-.glossary-hero-bg {
-    position: absolute;
-    top: -6px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    text-align: center;
-    white-space: nowrap;
-    font-size: clamp(4.2rem, 13vw, 9.1rem);
-    line-height: 1;
-    font-weight: 700;
-    color: #d4d4d4;
-    background: linear-gradient(180deg, #e8e8e8 0%, #d8d8d8 42%, #c4c4c4 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: 0.01em;
-    pointer-events: none;
-    user-select: none;
-    z-index: 0;
-    opacity: 0.85;
+.glossary-hero-divider {
+    width: 100px;
+    height: 3px;
+    background-color: var(--color-primary);
+    margin: 0 auto 28px;
 }
 
 .glossary-hero-title {
-    position: relative;
-    z-index: 1;
     margin: 0 0 12px;
     font-size: clamp(2rem, 3.6vw, 3.05rem);
     line-height: 1.15;
@@ -1488,8 +1472,14 @@ ul {
     flex-wrap: wrap;
     gap: 6px;
     margin-bottom: 36px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid var(--color-bg-light);
+    position: sticky;
+    top: 76px;
+    z-index: 10;
+    background: #fff;
+    padding: 16px calc(50vw - 50%);
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    border-bottom: none;
 }
 
 .glossary-alphabet a {
@@ -1512,6 +1502,17 @@ ul {
     border-color: var(--color-primary);
 }
 
+.glossary-alphabet a.is-active {
+    background-color: var(--color-primary);
+    color: #fff;
+    border-color: var(--color-primary);
+}
+
+.glossary-alphabet a:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
 .glossary-letter {
     font-size: 1.5rem;
     font-weight: 700;
@@ -1520,7 +1521,7 @@ ul {
     margin-bottom: 16px;
     padding-bottom: 8px;
     border-bottom: 2px solid var(--color-bg-light);
-    scroll-margin-top: 100px;
+    scroll-margin-top: 150px;
 }
 
 .glossary-list > .glossary-letter:first-child {
@@ -1531,7 +1532,7 @@ ul {
     padding: 16px 0 16px 18px;
     margin-bottom: 8px;
     border-left: 3px solid var(--color-primary);
-    scroll-margin-top: 100px;
+    scroll-margin-top: 150px;
 }
 
 .glossary-term-title {
@@ -2094,18 +2095,8 @@ ul {
     }
 
     .glossary-hero {
-        padding-top: 6px;
+        padding-top: 16px;
         margin-bottom: 26px;
-    }
-
-    .glossary-hero-heading {
-        height: 112px;
-        margin-bottom: 8px;
-    }
-
-    .glossary-hero-bg {
-        top: 8px;
-        font-size: clamp(3.6rem, 22vw, 5.9rem);
     }
 
     .glossary-hero-title {
@@ -2150,9 +2141,13 @@ ul {
     }
 
     .glossary-alphabet a {
-        width: 32px;
-        height: 32px;
-        font-size: 0.82rem;
+        width: 44px;
+        height: 44px;
+        font-size: 0.88rem;
+    }
+
+    .glossary-alphabet {
+        gap: 5px;
     }
 
     .article-cta-content {

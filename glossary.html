@@ -8,6 +8,7 @@
     <script defer src="access/access-guard.js"></script>
     <script defer src="js/nav-toggle.js"></script>
     <script defer src="js/search.js"></script>
+    <script defer src="js/glossary-nav.js"></script>
 </head>
 <body>
 
@@ -57,31 +58,23 @@
         </div>
     </nav>
 
+    <!-- SVG Grain Filter -->
+    <svg style="position:absolute;width:0;height:0" aria-hidden="true">
+        <filter id="grain-filter">
+            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+            <feColorMatrix type="saturate" values="0"/>
+        </filter>
+    </svg>
+
     <!-- Glossar Inhalt -->
     <main class="glossary">
         <div class="glossary-content">
             <header class="glossary-hero" aria-labelledby="glossar-title">
                 <span class="section-kicker">Begriffe</span>
-                <div class="glossary-hero-heading">
-                    <span class="glossary-hero-bg" aria-hidden="true">Glossar</span>
-                    <h1 id="glossar-title" class="glossary-hero-title visually-hidden">Glossar</h1>
-                </div>
+                <h1 id="glossar-title" class="glossary-hero-title">Glossar</h1>
+                <div class="glossary-hero-divider"></div>
                 <p class="glossary-intro">Die wichtigsten Begriffe rund um das Verlassenschafsverfahren und Erbrecht in Österreich.</p>
 
-                <p class="glossary-hero-question">Welchen Begriff suchen Sie?</p>
-                <div class="glossary-filter glossary-hero-search">
-                    <input type="text" class="glossary-filter-input" placeholder="Begriff suchen..." aria-label="Glossar durchsuchen">
-                    <span class="glossary-hero-search-icon" aria-hidden="true">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7.5"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                    </span>
-                </div>
-
-                <div class="glossary-hero-tags" aria-label="Häufig gesuchte Begriffe">
-                    <span class="glossary-hero-tags-label">Häufig gesucht:</span>
-                    <a class="glossary-hero-tag" href="#einantwortung">Einantwortung</a>
-                    <a class="glossary-hero-tag" href="#pflichtteil">Pflichtteil</a>
-                    <a class="glossary-hero-tag" href="#erbantrittserklarung">Erbantrittserklärung</a>
-                </div>
             </header>
 
             <nav class="glossary-alphabet" aria-label="Alphabet-Navigation">
