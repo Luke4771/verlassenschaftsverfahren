@@ -1319,7 +1319,7 @@ ul {
 /* === Glossar-Seite === */
 .glossary {
     min-height: calc(100vh - 300px);
-    padding: 60px 40px;
+    padding: 0 40px 60px;
     background-color: #fff;
     font-family: inherit;
 }
@@ -1331,37 +1331,31 @@ ul {
 
 .glossary-hero {
     text-align: center;
-    padding: 32px 0 20px;
-    margin-bottom: 34px;
-    background: radial-gradient(ellipse at 50% 40%, rgba(90, 132, 216, 0.04) 0%, transparent 70%);
+    padding: 91px calc(50vw - 50%) 91px;
+    margin-bottom: 0;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    background-color: var(--color-bg-light);
+    background-image:
+        repeating-radial-gradient(150% 82% at 50% -44%, rgba(26, 39, 68, 0.06) 0 1px, transparent 1px 16px),
+        repeating-radial-gradient(140% 78% at 50% 146%, rgba(26, 39, 68, 0.046) 0 1px, transparent 1px 18px),
+        linear-gradient(180deg, rgba(245, 245, 245, 0.82) 0%, rgba(245, 245, 245, 0.76) 45%, rgba(245, 245, 245, 0.84) 100%);
+    background-size: 100% 100%, 100% 100%, 100% 100%;
+    background-position: center center, center center, center center;
+    background-repeat: no-repeat;
     position: relative;
     isolation: isolate;
-}
-
-.glossary-hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-    filter: url(#grain-filter);
-    opacity: 0.12;
-}
-
-.glossary-hero .section-kicker {
-    position: relative;
-    z-index: 1;
 }
 
 .glossary-hero-divider {
     width: 100px;
     height: 3px;
     background-color: var(--color-primary);
-    margin: 0 auto 28px;
+    margin: 0 auto 16px;
 }
 
 .glossary-hero-title {
-    margin: 0 0 12px;
+    margin: 0 0 16px;
     font-size: clamp(2rem, 3.6vw, 3.05rem);
     line-height: 1.15;
     color: var(--color-text);
@@ -1372,7 +1366,7 @@ ul {
     position: relative;
     z-index: 1;
     max-width: 720px;
-    margin: 20px auto 0;
+    margin: 0 auto;
     color: #666;
     font-size: 1rem;
     font-weight: 300;
@@ -1468,18 +1462,55 @@ ul {
 }
 
 .glossary-alphabet {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-bottom: 36px;
     position: sticky;
     top: 76px;
     z-index: 10;
-    background: #fff;
-    padding: 16px calc(50vw - 50%);
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-    border-bottom: none;
+    margin-top: 20px;
+    margin-bottom: 36px;
+    padding: 0;
+}
+
+.glossary-alphabet .liquidGlass-wrapper {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.glossary-alphabet .liquidGlass-effect {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    backdrop-filter: blur(5px) saturate(120%);
+    -webkit-backdrop-filter: blur(5px) saturate(120%);
+    filter: url(#glass-distortion);
+    background: rgba(255, 255, 255, 0.24);
+    pointer-events: none;
+}
+
+.glossary-alphabet .liquidGlass-tint {
+    z-index: 1;
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.64);
+    pointer-events: none;
+}
+
+.glossary-alphabet .liquidGlass-shine {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.glossary-alphabet .liquidGlass-text {
+    z-index: 3;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    width: 100%;
 }
 
 .glossary-alphabet a {
@@ -2091,12 +2122,13 @@ ul {
     }
 
     .glossary {
-        padding: 40px 16px;
+        padding: 0 16px 40px;
     }
 
     .glossary-hero {
-        padding-top: 16px;
-        margin-bottom: 26px;
+        padding-top: 48px;
+        padding-bottom: 48px;
+        margin-bottom: 0;
     }
 
     .glossary-hero-title {
@@ -2146,7 +2178,7 @@ ul {
         font-size: 0.88rem;
     }
 
-    .glossary-alphabet {
+    .glossary-alphabet .liquidGlass-text {
         gap: 5px;
     }
 
