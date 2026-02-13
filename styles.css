@@ -1362,8 +1362,8 @@ ul {
     font-size: clamp(4.2rem, 13vw, 9.1rem);
     line-height: 1;
     font-weight: 700;
-    color: #e8e8e8;
-    background: linear-gradient(180deg, #f7f7f7 0%, #ededed 42%, #dfdfdf 100%);
+    color: #d4d4d4;
+    background: linear-gradient(180deg, #e8e8e8 0%, #d8d8d8 42%, #c4c4c4 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1371,7 +1371,7 @@ ul {
     pointer-events: none;
     user-select: none;
     z-index: 0;
-    opacity: 0.72;
+    opacity: 0.85;
 }
 
 .glossary-hero-title {
