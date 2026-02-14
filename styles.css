@@ -1337,9 +1337,9 @@ ul {
     margin-right: calc(-50vw + 50%);
     background-color: var(--color-bg-light);
     background-image:
-        repeating-radial-gradient(150% 82% at 50% -44%, rgba(26, 39, 68, 0.06) 0 1px, transparent 1px 16px),
-        repeating-radial-gradient(140% 78% at 50% 146%, rgba(26, 39, 68, 0.046) 0 1px, transparent 1px 18px),
-        linear-gradient(180deg, rgba(245, 245, 245, 0.82) 0%, rgba(245, 245, 245, 0.76) 45%, rgba(245, 245, 245, 0.84) 100%);
+        repeating-radial-gradient(125% 96% at -8% 18%, rgba(41, 52, 74, 0.055) 0 0.85px, transparent 0.85px 13px),
+        repeating-radial-gradient(132% 94% at 108% 84%, rgba(41, 52, 74, 0.046) 0 0.85px, transparent 0.85px 15px),
+        repeating-radial-gradient(140% 102% at 50% 50%, rgba(41, 52, 74, 0.026) 0 0.7px, transparent 0.7px 18px);
     background-size: 100% 100%, 100% 100%, 100% 100%;
     background-position: center center, center center, center center;
     background-repeat: no-repeat;

@@ -196,7 +196,7 @@ Es gibt keinen Build-Prozess, keine Abhängigkeiten und kein Backend.
 ## Glossar-Seite (glossary.html)
 - Root-Level-Seite wie impressum.html und datenschutz.html
 - Aufbau: Top-Bar, Navbar, Glossar-Hauptinhalt, Footer
-- Headerbereich als zentrierter Glossar-Hero in einem vollbreiten, hellgrauen Band direkt unter der Navbar; mit subtiler, landschaftsartiger Topographic/Contour-Linien-Textur im Hintergrund sowie Titel, Introtext, Suchhinweis, Suchfeld mit Lupe und "Häufig gesucht"-Chips
+- Headerbereich als zentrierter Glossar-Hero in einem vollbreiten, hellgrauen Band direkt unter der Navbar; mit subtiler, papierartiger Topographic/Contour-Linien-Textur und leicht erhoehter Linienopazitaet im Hintergrund sowie Titel, Introtext, Suchhinweis, Suchfeld mit Lupe und "Häufig gesucht"-Chips
 - Alphabetische Auflistung von ~21 erbrechtlichen Fachbegriffen mit Definitionen
 - Jeder Begriff hat eine Anchor-ID für Deep-Linking aus Suchergebnissen (z.B. `glossary.html#pflichtteil`)
 - Alphabet-Navigation (A-Z Kacheln, nur Buchstaben mit Einträgen)
