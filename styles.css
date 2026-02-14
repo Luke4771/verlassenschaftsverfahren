@@ -1112,8 +1112,9 @@ ul {
 .contact-portrait {
     flex: 0 0 150px;
     width: 150px;
-    -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 35%, black 40%, transparent 80%);
-    mask-image: radial-gradient(ellipse 80% 70% at 50% 35%, black 40%, transparent 80%);
+    height: 190px;
+    overflow: hidden;
+    align-self: flex-start;
 }
 
 .contact-portrait img {
