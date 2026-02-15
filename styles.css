@@ -1356,8 +1356,9 @@ ul {
 .glossary-list::before {
     content: "A–Z";
     position: absolute;
-    left: -26rem;
+    right: 100%;
     top: -0.15em;
+    writing-mode: vertical-rl;
     font-size: 14.4rem;
     font-weight: 800;
     line-height: 1;
