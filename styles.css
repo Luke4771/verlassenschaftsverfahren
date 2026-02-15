@@ -1346,6 +1346,25 @@ ul {
     background-repeat: no-repeat;
     position: relative;
     isolation: isolate;
+    overflow: hidden;
+}
+
+.glossary-list {
+    position: relative;
+}
+
+.glossary-list::before {
+    content: "A–Z";
+    position: absolute;
+    left: -26rem;
+    top: -0.15em;
+    font-size: 14.4rem;
+    font-weight: 800;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.025);
+    pointer-events: none;
+    z-index: 0;
+    letter-spacing: 0.05em;
 }
 
 .glossary-hero-divider {
@@ -2130,6 +2149,10 @@ ul {
         padding-top: 48px;
         padding-bottom: 48px;
         margin-bottom: 0;
+    }
+
+    .glossary-list::before {
+        display: none;
     }
 
     .glossary-hero-title {
