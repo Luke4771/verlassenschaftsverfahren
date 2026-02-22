@@ -2587,8 +2587,13 @@ ul {
         display: none;
     }
 
-    .process-header h2 {
+    .process-header h2,
+    .topics h2 {
         font-size: 1.55rem;
+        letter-spacing: 0.02em;
+        overflow-wrap: break-word;
+        -webkit-hyphens: auto;
+        hyphens: auto;
     }
 
     .process-description {
