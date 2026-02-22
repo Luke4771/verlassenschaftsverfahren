@@ -2583,7 +2583,7 @@ ul {
         margin-bottom: 36px;
     }
 
-    .process-header::before {
+    .section-header::before {
         display: none;
     }
 
