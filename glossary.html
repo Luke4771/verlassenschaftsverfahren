@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glossar – Verlassenschaftsverfahren.at</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="access/access-guard.js"></script>
+    <script defer src="js/nav-toggle.js"></script>
+    <script defer src="js/search.js"></script>
+    <script defer src="js/glossary-nav.js"></script>
+</head>
+<body>
+
+    <!-- Obere Kontaktleiste -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <span class="top-bar-left"><a href="https://www.cvikl.law" target="_blank" rel="noopener">Dr. Cvikl Rechtsanwalts GmbH</a></span>
+            <span class="top-bar-center">
+                <a href="tel:+4312908353"><span class="top-bar-icon top-bar-phone-icon" aria-hidden="true"></span> +43 (0) 1 290 83 53</a>
+                <span class="separator">|</span>
+                <a href="mailto:office@cvikl.law"><span class="top-bar-icon top-bar-mail-icon" aria-hidden="true"></span> office@cvikl.law</a>
+            </span>
+            <span class="top-bar-right"><a href="https://maps.google.com/?q=Getreidemarkt+1,+1060+Wien" target="_blank" rel="noopener"><span class="top-bar-icon top-bar-address-icon" aria-hidden="true"></span> Getreidemarkt 1, 1060 Wien</a></span>
+        </div>
+    </div>
+
+    <!-- Navigationsleiste -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html#home" class="nav-logo">
+                <img src="images/logo.png" alt="MC Logo">
+                <span class="nav-logo-text">
+                    <span class="nav-logo-name">CVIKL</span>
+                    <span class="nav-logo-title">RECHTSANWALT</span>
+                    <span class="nav-logo-subtitle">Verlassenschaftsverfahren.at</span>
+                </span>
+            </a>
+            <button class="nav-toggle" aria-label="Menü öffnen">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">Start</a></li>
+                <li><a href="index.html#wichtige-themen">Themenübersicht</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+                <li><a href="glossary.html">Glossar</a></li>
+                <li class="nav-search">
+                    <button class="nav-search-toggle" aria-label="Suche öffnen" aria-expanded="false">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    </button>
+                    <input class="nav-search-input" type="text" placeholder="Thema suchen..." aria-label="Suche" autocomplete="off">
+                    <div class="nav-search-results"></div>
+                </li>
+            </ul>
+            <a href="index.html#kontakt" class="nav-cta">Beratungstermin</a>
+        </div>
+    </nav>
+
+    <!-- SVG Grain Filter -->
+    <svg style="position:absolute;width:0;height:0" aria-hidden="true">
+        <filter id="grain-filter">
+            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+            <feColorMatrix type="saturate" values="0"/>
+        </filter>
+        <filter id="glass-distortion" x="0%" y="0%" width="100%" height="100%" filterUnits="objectBoundingBox">
+            <feTurbulence type="fractalNoise" baseFrequency="0.01 0.01" numOctaves="1" seed="5" result="turbulence"/>
+            <feComponentTransfer in="turbulence" result="mapped">
+                <feFuncR type="gamma" amplitude="1" exponent="10" offset="0.5"/>
+                <feFuncG type="gamma" amplitude="0" exponent="1" offset="0"/>
+                <feFuncB type="gamma" amplitude="0" exponent="1" offset="0.5"/>
+            </feComponentTransfer>
+            <feGaussianBlur in="turbulence" stdDeviation="3" result="softMap"/>
+            <feSpecularLighting in="softMap" surfaceScale="5" specularConstant="1" specularExponent="100" lighting-color="white" result="specLight">
+                <fePointLight x="-200" y="-200" z="300"/>
+            </feSpecularLighting>
+            <feComposite in="specLight" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litImage"/>
+            <feDisplacementMap in="SourceGraphic" in2="softMap" scale="28" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+    </svg>
+
+    <!-- Glossar Inhalt -->
+    <main class="glossary">
+        <div class="glossary-content">
+            <header class="glossary-hero" aria-labelledby="glossar-title">
+                <span class="section-kicker">Begriffe</span>
+                <h1 id="glossar-title" class="glossary-hero-title">Glossar</h1>
+                <div class="glossary-hero-divider"></div>
+                <p class="glossary-intro">Die wichtigsten Begriffe rund um das Verlassenschafsverfahren und Erbrecht in Österreich.</p>
+
+            </header>
+
+            <nav class="glossary-alphabet" aria-label="Alphabet-Navigation">
+                <div class="glossary-alphabet-glass liquidGlass-wrapper">
+                    <div class="liquidGlass-effect"></div>
+                    <div class="liquidGlass-tint"></div>
+                    <div class="liquidGlass-shine"></div>
+                    <div class="liquidGlass-text">
+                        <a href="#glossar-A">A</a>
+                        <a href="#glossar-E">E</a>
+                        <a href="#glossar-G">G</a>
+                        <a href="#glossar-I">I</a>
+                        <a href="#glossar-N">N</a>
+                        <a href="#glossar-P">P</a>
+                        <a href="#glossar-S">S</a>
+                        <a href="#glossar-T">T</a>
+                        <a href="#glossar-V">V</a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="glossary-list">
+
+                <!-- A -->
+                <h2 id="glossar-A" class="glossary-letter">A</h2>
+
+                <div class="glossary-term" id="abhandlung">
+                    <h3 class="glossary-term-title">Abhandlung</h3>
+                    <p class="glossary-term-definition">Die Abhandlung (Verlassenschaftsabhandlung) ist das eigentliche Kernverfahren des Verlassenschaftsverfahrens, in dem die Erbantrittserklärungen eingeholt, gegebenenfalls ein Inventar errichtet und die Einantwortung vorbereitet wird.</p>
+                </div>
+
+                <!-- E -->
+                <h2 id="glossar-E" class="glossary-letter">E</h2>
+
+                <div class="glossary-term" id="einantwortung">
+                    <h3 class="glossary-term-title">Einantwortung</h3>
+                    <p class="glossary-term-definition">Die Einantwortung ist der verfahrensbeendende Gerichtsbeschluss, mit dem ausgesprochen wird, wer die Verlassenschaft aufgrund welchen Berufungsgrundes zu welcher Quote erbt. Mit Rechtskraft des Einantwortungsbeschlusses gehen die Vermögenswerte und Verbindlichkeiten auf die Erben über.</p>
+                </div>
+
+                <div class="glossary-term" id="erbantrittserklarung">
+                    <h3 class="glossary-term-title">Erbantrittserklärung</h3>
+                    <p class="glossary-term-definition">Die Erbantrittserklärung ist die ausdrückliche schriftliche Erklärung eines Erben gegenüber dem Gerichtskommissär, mit der er die Erbschaft antritt. Sie kann unbedingt (mit unbeschränkter persönlicher Haftung) oder bedingt (mit Haftungsbeschränkung auf den Wert des geerbten Vermögens) abgegeben werden.</p>
+                </div>
+
+                <div class="glossary-term" id="erblasser">
+                    <h3 class="glossary-term-title">Erblasser</h3>
+                    <p class="glossary-term-definition">Der Erblasser ist die verstorbene Person, deren Vermögen im Rahmen des Verlassenschaftsverfahrens auf die Erben übergeht. Zuständig ist jenes Verlassenschaftsgericht, in dessen Sprengel der Erblasser seinen letzten gewöhnlichen Aufenthalt hatte.</p>
+                </div>
+
+                <div class="glossary-term" id="erbquote">
+                    <h3 class="glossary-term-title">Erbquote</h3>
+                    <p class="glossary-term-definition">Die Erbquote bezeichnet den rechnerischen Anteil, zu dem ein Erbe am gesamten Nachlass beteiligt ist, ausgedrückt als Bruchzahl. Sie ist in der Erbantrittserklärung anzugeben und bestimmt bei bedingter Erbantrittserklärung auch das Ausmaß der anteiligen Haftung.</p>
+                </div>
+
+                <div class="glossary-term" id="erbteilungsuebereinkommen">
+                    <h3 class="glossary-term-title">Erbteilungsübereinkommen</h3>
+                    <p class="glossary-term-definition">Das Erbteilungsübereinkommen ist eine Vereinbarung mehrerer Miterben über die konkrete Aufteilung des Nachlassvermögens, die vor dem Gerichtskommissär zu Protokoll gegeben werden kann. Es dient dazu, eine Miteigentümergemeinschaft nach der Einantwortung zu verhindern.</p>
+                </div>
+
+                <div class="glossary-term" id="erbverzicht">
+                    <h3 class="glossary-term-title">Erbverzicht</h3>
+                    <p class="glossary-term-definition">Der Erbverzicht ist ein zu Lebzeiten des Erblassers in Form eines Notariatsaktes geschlossener Vertrag, in dem eine künftig erbberechtigte Person auf ihr zukünftiges gesetzliches Erbrecht verzichtet. Sofern keine gesonderte Regelung getroffen wird, umfasst er auch den Verzicht auf den Pflichtteil.</p>
+                </div>
+
+                <!-- G -->
+                <h2 id="glossar-G" class="glossary-letter">G</h2>
+
+                <div class="glossary-term" id="gerichtskommissaer">
+                    <h3 class="glossary-term-title">Gerichtskommissär</h3>
+                    <p class="glossary-term-definition">Der Gerichtskommissär ist ein Notar, dem das Verlassenschaftsgericht die Durchführung des Verlassenschaftsverfahrens zuweist. Er wird in dieser Funktion hoheitlich tätig, unterliegt Amtspflichten wie der Amtsverschwiegenheit und darf keine der Parteien des Verfahrens beraten oder vertreten.</p>
+                </div>
+
+                <div class="glossary-term" id="gesetzliche-erbfolge">
+                    <h3 class="glossary-term-title">Gesetzliche Erbfolge</h3>
+                    <p class="glossary-term-definition">Die gesetzliche Erbfolge kommt zur Anwendung, wenn keine letztwillige Verfügung des Verstorbenen vorliegt, und bestimmt nach festen Regeln, welche Angehörigen erben und wie der Nachlass aufgeteilt wird. Sie berücksichtigt insbesondere nahe Familienangehörige sowie Ehegatten und eingetragene Partner.</p>
+                </div>
+
+                <!-- I -->
+                <h2 id="glossar-I" class="glossary-letter">I</h2>
+
+                <div class="glossary-term" id="inventar">
+                    <h3 class="glossary-term-title">Inventar</h3>
+                    <p class="glossary-term-definition">Das Inventar ist ein vom Gerichtskommissär von Amts wegen errichtetes vollständiges Verzeichnis aller Vermögenswerte und Verbindlichkeiten des Erblassers zum Todeszeitpunkt. Es dient als Beweismittel zur Bestimmung des Ausmaßes der Erbenhaftung bei einer bedingten Erbantrittserklärung.</p>
+                </div>
+
+                <!-- N -->
+                <h2 id="glossar-N" class="glossary-letter">N</h2>
+
+                <div class="glossary-term" id="nachlassseparation">
+                    <h3 class="glossary-term-title">Nachlassseparation</h3>
+                    <p class="glossary-term-definition">Die Nachlassseparation (&sect; 812 ABGB) ist eine gerichtliche Sicherungsmaßnahme, bei der auf Antrag eines Verlassenschaftsgläubigers ein seiner Forderung entsprechender Teil der Verlassenschaft vom Vermögen des Erben abgesondert wird. Sie schützt vor einer Gefährdung der Forderung durch Vermengung des Nachlasses mit dem Vermögen des Erben.</p>
+                </div>
+
+                <!-- P -->
+                <h2 id="glossar-P" class="glossary-letter">P</h2>
+
+                <div class="glossary-term" id="parentelensystem">
+                    <h3 class="glossary-term-title">Parentelensystem</h3>
+                    <p class="glossary-term-definition">Das Parentelensystem ist die dem österreichischen Erbrecht zugrunde liegende Ordnung der gesetzlichen Erbfolge, die die Verwandten des Verstorbenen in vier Erbenklassen (Parentelen) unterteilt: Kinder und deren Nachkommen, Eltern und deren Nachkommen, Großeltern und deren Nachkommen sowie Urgroßeltern. Die jeweils nähere Parentel schließt die weiter entfernte aus.</p>
+                </div>
+
+                <div class="glossary-term" id="pflichtteil">
+                    <h3 class="glossary-term-title">Pflichtteil</h3>
+                    <p class="glossary-term-definition">Der Pflichtteil ist ein als Geldanspruch ausgestalteter gesetzlicher Mindestanspruch bestimmter naher Angehöriger (insbesondere Kinder und Ehegatten) am Nachlass. Er beträgt die Hälfte der gesetzlichen Erbquote und steht den Berechtigten auch dann zu, wenn sie durch letztwillige Verfügung von der Erbfolge ausgeschlossen wurden.</p>
+                </div>
+
+                <div class="glossary-term" id="pflegevermaechtnis">
+                    <h3 class="glossary-term-title">Pflegevermächtnis</h3>
+                    <p class="glossary-term-definition">Das Pflegevermächtnis (&sect;&sect; 677, 678 ABGB) ist ein gesetzliches Vermächtnis, das nahestehenden Personen des Verstorbenen zusteht, die diesen in den letzten drei Jahren vor dem Tod mindestens sechs Monate in nicht bloß geringfügigem Ausmaß unentgeltlich gepflegt haben. Es gebührt neben dem Erb- und Pflichtteil.</p>
+                </div>
+
+                <!-- S -->
+                <h2 id="glossar-S" class="glossary-letter">S</h2>
+
+                <div class="glossary-term" id="schenkungsanrechnung">
+                    <h3 class="glossary-term-title">Schenkungsanrechnung</h3>
+                    <p class="glossary-term-definition">Die Schenkungsanrechnung ist ein erbrechtlicher Mechanismus, bei dem zu Lebzeiten des Erblassers vorgenommene Schenkungen rechnerisch der Verlassenschaft hinzuaddiert und vom Pflichtteil des Beschenkten abgezogen werden. Der Wert der Schenkung wird mittels Verbraucherpreisindex auf den Todeszeitpunkt angepasst.</p>
+                </div>
+
+                <!-- T -->
+                <h2 id="glossar-T" class="glossary-letter">T</h2>
+
+                <div class="glossary-term" id="testament">
+                    <h3 class="glossary-term-title">Testament</h3>
+                    <p class="glossary-term-definition">Ein Testament ist eine letztwillige Verfügung, durch die der Erblasser einseitig über das Schicksal seines Vermögens nach seinem Tod bestimmt. Es kann eigenhändig (zur Gänze handschriftlich verfasst und unterschrieben) oder fremdhändig (maschinengeschrieben, unter Beiziehung dreier Zeugen) errichtet werden.</p>
+                </div>
+
+                <div class="glossary-term" id="todesfallaufnahme">
+                    <h3 class="glossary-term-title">Todesfallaufnahme</h3>
+                    <p class="glossary-term-definition">Die Todesfallaufnahme (&sect; 145 AußStrG) ist der zentrale Verfahrensschritt des Vorverfahrens im Verlassenschaftsverfahren. Sie dient der Erhebung der persönlichen Angaben des Verstorbenen, der Feststellung der Vermögenswerte und Verbindlichkeiten sowie der Ermittlung, wer als Erbe in Frage kommt.</p>
+                </div>
+
+                <!-- V -->
+                <h2 id="glossar-V" class="glossary-letter">V</h2>
+
+                <div class="glossary-term" id="verkehrswert">
+                    <h3 class="glossary-term-title">Verkehrswert</h3>
+                    <p class="glossary-term-definition">Der Verkehrswert ist jener Preis, der bei einer Veräußerung einer Liegenschaft üblicherweise im redlichen Geschäftsverkehr erzielt werden kann (&sect; 2 LBG). Er wird im Verlassenschaftsverfahren mittels Vergleichswert-, Ertragswert- oder Sachwertverfahren durch einen Sachverständigen ermittelt.</p>
+                </div>
+
+                <div class="glossary-term" id="verlassenschaft">
+                    <h3 class="glossary-term-title">Verlassenschaft</h3>
+                    <p class="glossary-term-definition">Die Verlassenschaft ist eine eigene juristische Person, die als Trägerin der Vermögenswerte und Verbindlichkeiten des Erblassers fungiert und vom Vermögen der Erben zunächst getrennt ist. Sie erlischt mit Rechtskraft des Einantwortungsbeschlusses, woraufhin die Vermögenswerte auf die Erben übergehen.</p>
+                </div>
+
+                <div class="glossary-term" id="verlassenschaftskurator">
+                    <h3 class="glossary-term-title">Verlassenschaftskurator</h3>
+                    <p class="glossary-term-definition">Der Verlassenschaftskurator ist eine vom Verlassenschaftsgericht bestellte Person (in der Regel ein Notar oder Rechtsanwalt), die die Verwaltung und Vertretung des Nachlasses übernimmt, wenn die ordnungsgemäße Vertretung durch die Erben nicht sichergestellt ist.</p>
+                </div>
+
+                <div class="glossary-term" id="vorausvermaechtnis">
+                    <h3 class="glossary-term-title">Vorausvermächtnis</h3>
+                    <p class="glossary-term-definition">Das gesetzliche Vorausvermächtnis (&sect; 745 ABGB) sichert dem überlebenden Ehegatten, eingetragenen Partner oder Lebensgefährten ein Wohnrecht an der gemeinsam genutzten Wohnung sowie die zum Haushalt gehörenden beweglichen Sachen. Es steht dem Berechtigten neben seiner Stellung als Erbe zu.</p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand"><a href="https://www.cvikl.law" target="_blank" rel="noopener">CVIKL | RECHTSANWALT</a></div>
+            <div class="footer-links">
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
+            </div>
+            <p class="footer-copy">&copy; 2026</p>
+        </div>
+    </footer>
+
+    <script>
+    (function () {
+        var input = document.querySelector('.glossary-filter-input');
+        if (!input) return;
+        input.addEventListener('input', function () {
+            var q = this.value.toLowerCase().trim();
+            var terms = document.querySelectorAll('.glossary-term');
+            var letters = document.querySelectorAll('.glossary-letter');
+            terms.forEach(function (term) {
+                var title = term.querySelector('.glossary-term-title');
+                var def = term.querySelector('.glossary-term-definition');
+                var text = (title ? title.textContent : '') + ' ' + (def ? def.textContent : '');
+                term.classList.toggle('hidden', q.length > 0 && text.toLowerCase().indexOf(q) === -1);
+            });
+            letters.forEach(function (letter) {
+                var next = letter.nextElementSibling;
+                var hasVisible = false;
+                while (next && !next.classList.contains('glossary-letter')) {
+                    if (next.classList.contains('glossary-term') && !next.classList.contains('hidden')) {
+                        hasVisible = true;
+                    }
+                    next = next.nextElementSibling;
+                }
+                letter.classList.toggle('hidden', q.length > 0 && !hasVisible);
+            });
+        });
+    })();
+    </script>
+
+</body>
+</html>
