@@ -2319,7 +2319,7 @@ ul {
         background: rgba(255, 255, 255, 0.1);
         border: 1px solid rgba(255, 255, 255, 0.2) !important;
         color: #fff;
-        font-size: 1rem;
+        font-size: 1.15rem;
     }
 
     .nav-search-input::placeholder {
@@ -2883,7 +2883,7 @@ ul {
 .contact-v2-form-bg {
     position: relative;
     max-width: 900px;
-    margin: 0 auto;
+    margin: 80px auto 0;
 }
 
 .contact-v2-form-bg::before {

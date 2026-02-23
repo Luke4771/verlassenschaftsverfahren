@@ -29,6 +29,15 @@
 - `js/scroll-animations.js`: Scroll-basierte Reveal-Animationen.
 - `js/glossary-nav.js`: Aktive Buchstaben-Navigation im Glossar.
 
+## Mobile Navigation (Responsive)
+
+Breakpoint: `max-width: 768px` in `styles.css`.
+
+- `.nav-menu` wird als Fullscreen-Overlay dargestellt (`position: fixed; inset: 0`).
+- Alle Menueeintraege (`li`) und das Suchfeld (`.nav-search`) nutzen einheitliche Breite `min(86vw, 420px)`.
+- `.nav-cta` (Beratungstermin) ist `position: fixed` unterhalb der Menuepunkte positioniert, nicht am Bildschirmrand.
+- Steuerung via `js/nav-toggle.js`: Klassen `.open` auf Menu und `.active` auf Toggle-Button.
+
 ## Geteilte Layout-Bloecke
 
 Top-Bar, Navbar und Footer sind in mehreren Seiten dupliziert.
