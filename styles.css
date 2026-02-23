@@ -2295,7 +2295,7 @@ ul {
         border-radius: 0;
         position: fixed;
         left: 50%;
-        bottom: calc(env(safe-area-inset-bottom, 0px) + clamp(14px, 3.5vh, 28px));
+        bottom: calc(env(safe-area-inset-bottom, 0px) + clamp(160px, 28vh, 280px));
         transform: translateX(-50%);
         z-index: 161;
     }
@@ -2305,7 +2305,7 @@ ul {
     }
 
     .nav-search {
-        width: 100%;
+        width: min(86vw, 420px);
         flex-direction: column;
     }
 
@@ -2315,7 +2315,7 @@ ul {
 
     .nav-search-input {
         width: 100% !important;
-        padding: 12px 14px !important;
+        padding: 14px 16px !important;
         background: rgba(255, 255, 255, 0.1);
         border: 1px solid rgba(255, 255, 255, 0.2) !important;
         color: #fff;
