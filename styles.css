@@ -2756,7 +2756,7 @@ ul {
 /* === Kontakt V2 Section === */
 .contact-v2 {
     background-color: var(--color-bg-light);
-    padding: 64px 40px 80px;
+    padding: 64px 40px 64px;
     scroll-margin-top: 60px;
 }
 
@@ -2933,8 +2933,8 @@ ul {
 .contact-v2-form-bg {
     position: relative;
     max-width: 900px;
-    margin: 48px auto 0;
-    padding-top: 60px;
+    margin: 24px auto 0;
+    padding-top: 40px;
     scroll-margin-top: 100px;
 }
 
