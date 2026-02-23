@@ -2935,17 +2935,18 @@ ul {
     max-width: 900px;
     margin: 48px auto 0;
     padding-top: 60px;
+    scroll-margin-top: 100px;
 }
 
 .contact-v2-form-bg::before {
     content: "";
     position: absolute;
     pointer-events: none;
-    inset: -80px -200px -60px;
-    background-image: radial-gradient(circle, rgba(90, 132, 216, 0.48) 1.2px, transparent 1.2px);
+    inset: 0 -200px 0;
+    background-image: radial-gradient(circle, rgba(59, 107, 222, 0.8) 1.4px, transparent 1.4px);
     background-size: 14px 14px;
-    -webkit-mask-image: radial-gradient(ellipse 60% 88% at 50% 62%, black 0%, transparent 78%);
-    mask-image: radial-gradient(ellipse 60% 88% at 50% 62%, black 0%, transparent 78%);
+    -webkit-mask-image: radial-gradient(ellipse 60% 40% at 50% 50%, black 0%, transparent 85%);
+    mask-image: radial-gradient(ellipse 60% 40% at 50% 50%, black 0%, transparent 85%);
     z-index: 0;
 }
 
