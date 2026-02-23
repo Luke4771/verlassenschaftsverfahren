@@ -2794,13 +2794,63 @@ ul {
     margin: 12px auto 0;
 }
 
+.contact-v2-lead {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    max-width: 740px;
+    margin: 24px auto 0;
+}
+
+.contact-v2-lead p {
+    flex: 1;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: #555;
+    text-align: left;
+    margin: 0;
+}
+
+.contact-v2-lead a {
+    color: var(--color-primary);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.contact-v2-lead a:hover {
+    border-bottom-color: var(--color-primary);
+}
+
+.contact-v2-avatar {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-v2-avatar img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.contact-v2-avatar span {
+    font-size: 0.85rem;
+    color: var(--color-text);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
 /* --- Timeline Cards --- */
 .contact-v2-timeline {
     display: flex;
     align-items: stretch;
     justify-content: center;
     gap: 0;
-    margin-bottom: 48px;
+    margin-bottom: 0;
 }
 
 .contact-v2-card {
@@ -2883,18 +2933,19 @@ ul {
 .contact-v2-form-bg {
     position: relative;
     max-width: 900px;
-    margin: 80px auto 0;
+    margin: 48px auto 0;
+    padding-top: 60px;
 }
 
 .contact-v2-form-bg::before {
     content: "";
     position: absolute;
     pointer-events: none;
-    inset: -20px -200px;
+    inset: -80px -200px -60px;
     background-image: radial-gradient(circle, rgba(90, 132, 216, 0.48) 1.2px, transparent 1.2px);
     background-size: 14px 14px;
-    -webkit-mask-image: radial-gradient(ellipse 58% 72% at 50% 50%, black 38%, transparent 100%);
-    mask-image: radial-gradient(ellipse 58% 72% at 50% 50%, black 38%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 60% 88% at 50% 62%, black 0%, transparent 78%);
+    mask-image: radial-gradient(ellipse 60% 88% at 50% 62%, black 0%, transparent 78%);
     z-index: 0;
 }
 
@@ -2960,7 +3011,7 @@ ul {
 
 .contact-v2-form button {
     width: 100%;
-    background-color: var(--color-primary);
+    background-color: var(--color-dark-navy);
     color: #fff;
     border: none;
     padding: 14px 28px;
@@ -2975,7 +3026,7 @@ ul {
 }
 
 .contact-v2-form button:hover {
-    background-color: var(--color-primary-hover);
+    background-color: #0d1c3d;
 }
 
 /* --- Contact V2 Responsive --- */
@@ -2991,6 +3042,24 @@ ul {
     .contact-v2-header h2 {
         font-size: 1.55rem;
         letter-spacing: 0.02em;
+    }
+
+    .contact-v2-lead {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-v2-lead p {
+        text-align: center;
+    }
+
+    .contact-v2-avatar {
+        order: -1;
+    }
+
+    .contact-v2-avatar img {
+        width: 70px;
+        height: 70px;
     }
 
     .contact-v2-timeline {
